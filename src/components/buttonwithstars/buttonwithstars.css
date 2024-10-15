@@ -1,0 +1,90 @@
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    width: 200px;
+    background-color: #041019; /* Button background color */
+    color: white;
+    border: none;
+    cursor: pointer;
+    overflow: hidden; /* Ensures ellipses don't overflow the button */
+  }
+  
+  .btn_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+  }
+  
+  .btn_text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 1;
+  }
+  
+  .btn_image_container {
+    position: absolute;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+  }
+  
+  .btn_Image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .btn_Image.bottom {
+    z-index: 0;
+  }
+  
+  .btn_Image.top {
+    z-index: 1;
+  }
+  
+  /* img {
+    width: 100%;
+    height: 100%;
+    display: block;
+  } */
+  
+  /* Ellipses (stars) styles */
+  .ellipse_container {
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 100%; /* Full height of the button */
+    pointer-events: none; /* Ellipses shouldn't interfere with clicks */
+  }
+  
+  .ellipse {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.5; /* Initial opacity */
+    animation: fadeInOut 5s ease-in-out infinite; /* Fading animation */
+  }
+  
+  /* Animation keyframes for fading effect */
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  

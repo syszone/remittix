@@ -1,0 +1,78 @@
+/* General box styling */
+.FeatureBox {
+  width: 335.079px;
+  height: 312.049px;
+  border-radius: 9px;
+  padding: 24px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Light box */
+.FeatureBox__light {
+  background-color: #F2F5F6;
+}
+
+/* Dark box */
+.FeatureBox__dark {
+  background-color: #040F19;
+  background-image: url('../../assets/images/background_lines.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.FeatureBox__dark .FeatureBox__heading {
+  color: var(--color-text-highlight);
+}
+
+.FeatureBox__dark .FeatureBox__text {
+  color: var(--color-text) !important;
+}
+
+/* Top image */
+.FeatureBox__top-image {
+  position: absolute;
+  left: 24px;
+  width: 36.847px;
+  height: 36.847px;
+}
+
+/* Heading text */
+.FeatureBox__heading {
+  font-weight: bold;
+  text-align: left;
+  margin-left: 0px;
+  margin-top: 64px;
+  margin-bottom: 10px;
+  color: inherit;
+}
+
+/* Divider line */
+.FeatureBox__divider-line {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(249, 255, 56, 0.00) 0%, rgba(249, 255, 56, 0.24) 17.83%, rgba(249, 255, 56, 0.00) 100%);
+  margin-bottom: 10px;
+}
+
+/* Text */
+.FeatureBox__text {
+  color: inherit;
+}
+
+/* Link */
+.FeatureBox__link {
+  position: absolute;
+  bottom: 30px;
+  left: 24px;
+  text-decoration: none;
+}
+
+/* Bottom image */
+.FeatureBox__bottom-image {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  width: 36.847px;
+  height: 36.847px;
+}

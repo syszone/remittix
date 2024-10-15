@@ -1,0 +1,11 @@
+.remtittix__reviews {
+    
+    display: flex; /* Align children side by side */
+    flex-direction: column;
+    justify-content: center; /* Space between the content and bank details */
+    align-items:center; /* Align items to the top */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    color: #000 !important;   /* Example text color */
+    width: 100%;
+    background-color: #F2F5F6;
+}

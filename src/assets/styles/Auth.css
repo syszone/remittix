@@ -1,0 +1,121 @@
+.register-container,
+ .LoginPage{ padding-top: 100px;}
+
+
+
+
+  /* Form styles */
+  /* .auth-form {
+    width: 100%;
+    max-width: 400px;
+    background-color: #041019;  
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: #ffffff;  
+  } */
+  
+  /* Form group styles */
+  .form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .form-group input {
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    font-size: 16px;
+  }
+  
+  /* Input focus state */
+  .form-group input:focus {
+    outline: none;
+    border-color: #f9ff38;
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+  
+  /* Submit button styles */
+  .auth-button {
+    padding: 12px;
+    background-color: #f9ff38;
+    color: #000000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 100%;
+  }
+  
+  .auth-button:hover {
+    background-color: #d6e032;
+  }
+  
+  /* Optional: Additional styling for the header */
+  .auth-header {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  /* Footer Links Styling */
+.auth-footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 64px; /* Gap between links */
+  margin-top: 20px; /* Adjust the space above the footer links */
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 60px;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.footer-link:hover {
+  color: rgba(255, 255, 255, 0.6); /* Optional hover effect */
+}
+
+.copyright {
+  cursor: default; /* Makes the copyright text non-clickable */
+}
+
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .auth-form {
+      padding: 20px;
+    }
+  
+    .auth-header {
+      font-size: 20px;
+    }
+  
+    .form-group input {
+      font-size: 14px;
+    }
+  
+    .auth-button {
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
+  

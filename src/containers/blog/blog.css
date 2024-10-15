@@ -1,0 +1,38 @@
+.remtittix__blogList{
+    display: flex; /* Align children side by side */
+    flex-direction: column;
+    justify-content: center; /* Space between the content and bank details */
+    align-items:center; /* Align items to the top */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+     
+    width: 100%;
+    /* background-color: var(--color-bg);
+
+    background-image: url('../../assets/images/background-roadmap.png');  */
+    background-size: cover; /* Ensure the image covers the entire element */
+    background-repeat: no-repeat; /* Prevent the image from repeating */ 
+    background-position: center -250px; /* Adjust the image vertically */
+
+}
+.RemittixCard {
+     
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+.RemittixCard:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.BlogList__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    gap: 15px; /* Space between items */
+    max-width: 1200px; /* Limit the container's max width */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px; /* Optional padding around the container */
+}
+
+@media screen and (max-width: 768px) {
+    .BlogList__container {
+        grid-template-columns: 1fr; /* Single column on mobile */
+    }
+}

@@ -1,4 +1,26 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+
+:root {
+  --font-family: 'Onest', sans-serif;
+
+  --gradient-text: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
+  --gradient-bar: linear-gradient(103.22deg, #AE67FA -13.86%, #F49867 99.55%);
+  --gradient-box: linear-gradient(103.22deg, #AE67FA -13.86%, #F49867 99.55%);
+  
+  --color-bg: #041019;
+  --color-light-container : #ffffff;
+  --color-text: #ffffff;
+  --color-text-light: #000000;
+  --color-text-highlight: #F9FF38;
+  --color-subtext: #ffffff;
+  --color-subtext-light: #000000;
+  --color-dark-text: #697783;
+  --secondry-color-text: #676B6B;
+}
+
+.right-align { margin-left: auto; }
+
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +32,4 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
+} */

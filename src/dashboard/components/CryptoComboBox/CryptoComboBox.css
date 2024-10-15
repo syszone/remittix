@@ -1,0 +1,90 @@
+/* Container */
+.crypto-combobox-container {
+    position: relative;
+    border-radius: 12px;
+    border: 1.5px solid rgba(249, 255, 56, 0.32);
+    background: rgba(17, 24, 30, 0.32);
+    box-shadow: 0px 0.667px 0.667px rgba(255, 255, 255, 0.12) inset;
+    padding: 15px 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Selected Item */
+  .crypto-combobox-selected {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  /* Placeholder text */
+  .crypto-combobox-placeholder {
+    color: rgba(255, 255, 255, 0.35);
+    font-size: 16px;
+    font-weight: 700;
+  }
+  
+  /* Selected crypto icon */
+  .crypto-combobox-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 15px;
+  }
+  
+  /* Selected crypto label */
+  .crypto-combobox-label {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    flex-grow: 1;
+  }
+  
+  /* Down arrow */
+  .crypto-combobox-arrow {
+    font-size: 16px;
+    color: #fff;
+  }
+  
+  /* Dropdown list */
+  /* .crypto-combobox-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(17, 24, 30, 0.32);
+    border-radius: 12px;
+    border: 1.5px solid rgba(249, 255, 56, 0.32);
+    box-shadow: 0px 0.667px 0.667px rgba(255, 255, 255, 0.12) inset;
+    margin-top: 8px;
+    z-index: 100;
+  } */
+
+  .crypto-combobox-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(17, 24, 30, 0.85); /* Darker background with less transparency */
+    border-radius: 12px;
+    border: 1.5px solid rgba(249, 255, 56, 0.32);
+    box-shadow: 0px 0.667px 0.667px rgba(255, 255, 255, 0.12) inset;
+    margin-top: 8px;
+    z-index: 100;
+  }
+
+  
+  /* List item */
+  .crypto-combobox-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    cursor: pointer;
+  }
+  
+  .crypto-combobox-item:hover {
+    background: rgba(255, 255, 255, 0.06);
+  }
+  

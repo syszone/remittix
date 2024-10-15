@@ -1,0 +1,18 @@
+/* Outer wrapper for the border */
+.gradient-wrapper {
+    padding: 1px; /* Padding creates the border effect */
+    border-radius: 50%; /* Makes the wrapper circular */
+    display: inline-block;
+    
+    /* Gradient background for the outer wrapper */
+    background: linear-gradient(var(--wrapper-gradient-start), var(--wrapper-gradient-end));
+  }
+  
+  /* Inner circle with minimal color to transparent gradient */
+  .maincircle {
+    border-radius: 50%; /* Ensures it's a perfect circle */
+    
+    /* Minimal color to transparent gradient fill */
+    background: linear-gradient(var(--fill-angle), var(--circle-color), var(--circle-gradient-end));
+  }
+  

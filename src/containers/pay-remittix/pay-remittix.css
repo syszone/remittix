@@ -1,0 +1,229 @@
+.remtittix__payremittix {
+    
+    display: flex; /* Align children side by side */
+    justify-content: space-between; /* Space between the content and bank details */
+    align-items: flex-start; /* Align items to the top */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+     
+    color: #000;   /* Example text color */
+    
+    }
+
+    .remtittix__payremittix_extended-section{
+        
+        display: flex; /* Align children side by side */
+        justify-content: space-between; /* Space between the content and bank details */
+        align-items: center; /* Align items to the top */
+        flex-wrap: wrap; /* Allow items to wrap on smaller screens */        
+         
+        color: #000;   /* Example text color */
+    }
+
+    .dark_background-image 
+    {
+        background-image: url('../../assets/images/background-crypto-payment.png');
+        background-size:cover; /* Ensure the image covers the entire element */
+   
+        background-repeat: no-repeat; /* Prevent the image from repeating */
+        width: 100%; /* Make sure it takes the full width of the container */
+        min-height: 50%; /* Ensure it covers the full viewport height */
+    }    
+
+    .remtittix__payremittix-content{
+
+        flex-basis: 60%;  /* Allow the content to take approximately 60% of the container */
+        max-width: 920px; /* Optional max width to match the Figma design */
+        margin-right: 60px; /* Space on the right as per the design */
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Optional: Center content vertically (if needed) */
+        padding: 20px;
+  
+    } 
+
+     
+
+    .remtittix__payremittix-content_bankdetails {
+        border-radius: 11.275px;
+        background: #FFFFFF; /* White background */
+        box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.25); /* Drop shadow at the bottom */
+        padding: 20px 15px;    
+        border: none; /* Ensure there's no border */
+
+        margin-top: 250px !important;
+     
+        flex-basis: 40%; /* Allow bank details to take approximately 40% of the container */
+        max-width: 576px; /* Optional max width to match the Figma design */
+        flex: 1; /* Allow each section to take up equal space */
+        margin: 10px; /* Add some margin for spacing */
+    }
+
+    .remtittix__payremittix-content_exchangedetails{
+
+       
+     
+        padding: 20px 15px;    
+        border: none; /* Ensure there's no border */
+        flex-basis: 40%; /* Allow bank details to take approximately 40% of the container */
+        max-width: 576px; /* Optional max width to match the Figma design */
+
+        flex-basis: 40%; /* Allow bank details to take approximately 40% of the container */
+        max-width: 576px; /* Optional max width to match the Figma design */
+        flex: 1; /* Allow each section to take up equal space */
+        margin: 10px; /* Add some margin for spacing */
+    }
+
+    .remtittix__payremittix-content_exchangedetails .responsive-svg {
+      max-width: 100%; /* Adjust based on your design */
+      height: auto;
+    }
+  
+ 
+ 
+
+
+.remtittix__payremittix-featurebox-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
+    grid-template-rows: auto auto; /* Two rows with automatic height */
+    gap: 20px; /* Optional: space between grid items */
+    padding: 20px; /* Optional: padding around the grid */
+    margin-top: 40px;
+
+    max-width: 700px; /* Set a max width for the grid to center it within the content */
+    width: 100%; /* Ensures the grid takes full width within the max width */
+    margin: 40px auto; /* Center the grid horizontally */
+    padding: 20px 0; /* Optional: Add padding around the grid */
+}
+      
+    /* Optional: Ensure FeatureBox items take the full width of their grid cells */
+.FeatureBox {
+width: 100%; /* Make sure the box takes the full width of its grid cell */
+}
+
+.tab-heading{
+    color: #000;
+    font-size: 19.106px;        
+    font-weight: 500; 
+}
+.tab-description{
+    padding: 20px 0 0 0;
+}
+
+.remtittix__payremittix-content_exchangedetails .exchange-card {
+    display: flex;
+    align-items: center; /* Vertically centers content */
+    justify-content: space-between; /* Space between image and text */
+    width: 100%;
+    height: 78.672px;
+    flex-shrink: 0;
+    border-radius: 13.722px;
+    
+    padding: 0 40px; /* Padding on left and right for consistent spacing */
+    margin: 10px 0px;
+    box-sizing: border-box; /* Ensures padding is included in the width */
+  }
+  
+ 
+  .remtittix__payremittix-content_exchangedetails .exchange-card img {
+    margin-right: 40px; /* Margin between image and text */
+  }
+  
+  .remtittix__payremittix-content_exchangedetails .exchange-card p {
+    margin-left: 40px;
+     /* Adjust text color if needed */
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0; /* Remove default paragraph margin */
+  }
+  
+  .remtittix__payremittix-content_exchangedetails .stripe {
+    background: #6860FF;
+    color: white;
+  }
+
+  .remtittix__payremittix-content_exchangedetails .wise{
+    background: #A0E071;
+    color: #000;
+  }
+
+  .remtittix__payremittix-content_exchangedetails .rimittix {
+    background: #F9FF38;
+    color: #000 !important;
+  }
+
+  .remtittix__payremittix-content_exchangedetails .coinbase{
+    background: #0052FE;
+    color: white;
+}
+
+.custom-bullet-list {
+    list-style-type: none; /* Remove default bullets */
+    margin-left: 0; /* Remove default margin */
+    padding-left: 0; /* Remove default padding */
+    margin-top: 30px;
+  }
+  
+  .custom-bullet-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px; /* 30px space between list items */
+  }
+  .custom-bullet-list img {
+    width: 15px;
+    height: 15px;
+  }
+ 
+  
+  .custom-bullet-list .custom-bullet {
+    margin-right: 10px; /* Space between bullet and text */
+    width: 20px; /* Set width for the bullet image */
+    height: 20px; /* Set height for the bullet image */
+  }
+  
+  .custom-bullet-list span {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20.64px; /* 129% of font size */
+    color: var(--color-text)/* Optional: Set text color */
+  }
+      /* Media query for mobile devices (single column layout on small screens) */
+@media screen and (max-width: 768px) {
+
+    .remtittix__payremittix-content_bankdetails {
+        margin-top: 0px !important; /* Change margin-top when screen width is 768px or smaller */
+    }
+
+    .remtittix__payremittix-featurebox-grid {
+      grid-template-columns: 1fr; /* Switch to a single column */
+      grid-template-rows: auto; /* Automatically adjust row height */
+      max-width: 100%; /* Ensure it takes the full width on smaller screens */
+      margin: 0 !important;
+    }
+     
+
+    .remtittix__payremittix-content{
+        margin-right: 0px;
+        flex-basis: auto; /* Remove or reset the flex-basis */
+         
+    }
+
+    .remtittix__payremittix {
+        flex-direction: column;
+    }
+
+     
+    .remtittix__payremittix h1 {
+        font-size: 30px;
+        line-height: 35px;
+    }
+    
+     
+    .remtittix__payremittix_extended-section{
+        
+      display: block; /* Align children side by side */
+       
+  }
+
+  }

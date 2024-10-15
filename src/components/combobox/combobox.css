@@ -1,0 +1,136 @@
+:root {
+    --combo-amount-color: #F7931A; /* Amount color */
+    --combo-label-color: #676B6B; /* Currency label color */
+    --combo-arrow-color: #4C5522; /* Arrow color */
+    --color-text: #ffffff; /* Default text color */
+    --color-combo-highlight: #F7931A; /* Highlight color for selected text */
+  }
+  
+  /* Container for the ComboBox */
+  .combobox-container {
+    position: relative;
+    width: 100%; /* Ensure the container takes 100% width */
+    max-width: 100%; /* No max width limit, stretches to full width */
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  
+  /* Header that shows the selected item */
+  .combobox-header {
+    background: rgba(17, 24, 30, 0.32);
+    border: 1.409px solid rgba(249, 255, 56, 0.27);
+    box-shadow: 0px 0.626px 0.626px 0px rgba(255, 255, 255, 0.12) inset;
+    border-radius: 8px;
+    padding: 12px 15px;
+    color: var(--color-text);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    width: 100%; /* Ensure the header takes 100% width */
+  }
+  
+  /* Custom arrow */
+  .combobox-arrow {
+    border: solid var(--combo-arrow-color); /* Use variable for arrow color */
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .combobox-arrow.open {
+    transform: rotate(-135deg); /* Rotate arrow when open */
+  }
+  
+  /* Selected item display in the header */
+  .combobox-selected-item {
+    display: flex;
+    align-items: center; /* Vertically center the items */
+    width: 100%; /* Ensure selected item fills the header */
+  }
+  
+  .combo-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  .combo-amount {
+    margin-right: 10px;
+    color: var(--combo-amount-color); /* Use variable for amount color */
+    display: flex;
+    align-items: center; /* Ensures text is aligned vertically */
+    height: 100%; /* Aligns the text with the height of the parent */
+  }
+  
+  .combo-label {
+    color: var(--combo-label-color); /* Use variable for label color */
+    font-weight: bold;
+    display: flex;
+    align-items: center; /* Ensures text is aligned vertically */
+    height: 100%; /* Aligns the text with the height of the parent */
+  }
+  
+  /* Dropdown List */
+  .combobox-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%; /* Ensure the dropdown list takes full width */
+    background-color: rgba(2, 8, 14, 0.85);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: 1.409px solid rgba(249, 255, 56, 0.27);
+    border-radius: 8px;
+    box-shadow: 0px 0.626px 0.626px 0px rgba(255, 255, 255, 0.12) inset;
+    z-index: 999;
+  }
+  
+  /* Dropdown Option */
+  .combobox-option {
+    display: flex;
+    align-items: center; /* Vertically center the items */
+    padding: 12px;
+    color: var(--color-text);
+    background-color: rgba(2, 8, 14, 0.85);
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    width: 100%; /* Ensure option takes full width */
+  }
+  
+  .combo-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  .combo-amount {
+    margin-right: 10px;
+    color: var(--combo-amount-color); /* Use variable for amount color */
+    display: flex;
+    align-items: center; /* Ensures text is aligned vertically */
+    height: 100%; /* Aligns the text with the height of the parent */
+  }
+  
+  .combo-label {
+    color: var(--combo-label-color); /* Use variable for label color */
+    font-weight: bold;
+    display: flex;
+    align-items: center; /* Ensures text is aligned vertically */
+    height: 100%; /* Aligns the text with the height of the parent */
+  }
+  
+  /* Option Hover */
+  .combobox-option:hover {
+    background-color: rgba(30, 40, 50, 0.85);
+  }
+  
+  /* Selected option styling in the list */
+  .combobox-option.selected {
+    color: var(--color-combo-highlight); /* Highlight text color for selected */
+    background-color: rgba(2, 8, 14, 0.75);
+  }
+  

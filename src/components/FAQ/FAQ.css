@@ -1,0 +1,167 @@
+.Faq__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .Faq__filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 40px 0;
+  }
+  
+  .Faq__filter-button {
+    width: 120px;
+    height: 54px;
+    border-radius: 25px;
+    border: 1px solid #FFF;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .Faq__filter-button.selected {
+    width: 125px;
+    background: #F9FF38;
+    color: #000;
+  }
+  
+  /* FAQ Item Structure */
+  .Faq__items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .Faq__item {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .Faq__icon {
+    flex-shrink: 0;
+  }
+  /* Question Box */
+.Faq__question {
+    border-radius: 12px;
+    background: rgba(62, 62, 31, 0.32);
+    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.12) inset;
+    backdrop-filter: blur(15.35px);
+    max-width: 788px;
+    min-width: 600px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    text-align: left;
+    
+  }
+  
+  /* Opened Question Box */
+  .Faq__question--open {
+    background: rgba(62, 62, 31, 0.35);
+    max-width: 785px;
+    text-align: left;
+  }
+  
+  /* Question Text */
+  .Faq__question p {
+    color: rgba(255, 255, 255, 0.43);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 46px;
+    letter-spacing: -0.8px;
+    text-align: left; /* Align text to the left */
+  }
+  
+  .Faq__question--open p {
+    color: #F9FF38;
+    font-weight: 700;
+    text-align: left; /* Align text to the left */
+  }
+  
+  /* Gradient Line (Now on the box itself) */
+  .Faq__gradient-line {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(249, 255, 56, 0) 0%, rgba(249, 255, 56, 0.68) 17.83%, rgba(249, 255, 56, 0) 100%);
+    position: absolute;
+    top: 0; /* Position it at the top of the box */
+    left: 0;
+    border-radius: 12px 12px 0 0; /* Round the top corners */
+  }
+  
+  /* FAQ Answer */
+  .Faq__answer {
+    margin-top: 20px; /* Add spacing between question and answer */
+    text-align: left; /* Align text to the left */
+  }
+  
+  .Faq__answer p {
+    color: rgba(255, 255, 255, 0.58);
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 300;
+    letter-spacing: 0.2px;
+    text-align: left; /* Align text to the left */
+    text-align: justify;
+  }
+  
+  /* Light Mode Styling */
+  .Faq__question.light {
+    background: #F1F1F6;
+    text-align: left; /* Align text to the left */
+  }
+  
+  .Faq__question.light p {
+    color: #000;
+    text-align: left; /* Align text to the left */
+  }
+  
+  .Faq__question--open.light {
+    background: #F1F1F6;
+    text-align: left; /* Align text to the left */
+  }
+  
+  .Faq__question--open.light p {
+    color: #1A1A1A;
+    text-align: left; /* Align text to the left */
+  }
+  
+  .Faq__answer.light p {
+    color: rgba(0, 0, 0, 0.58);
+    line-height: 25px;
+    text-align: left; /* Align text to the left */
+  }
+
+  @media screen and (max-width: 768px) {
+    .Faq__question {
+      min-width: initial; /* Removes the min-width */
+      width: 100%;
+      
+    }
+
+    .Faq__question p {
+        font-size: 14px !important;
+      }
+      .Faq__answer p {
+        font-size: 14px !important;
+      }
+      .Faq__items {
+        width: 100%;
+    }
+
+}
+  /* Adjust layout for very small screens */
+@media screen and (max-width: 480px) {
+    .Faq__question {
+      flex-direction: column; /* Stack icon and text */
+      align-items: flex-start;
+    }
+  
+    .Faq__question p {
+      margin-bottom: 10px; /* Add space between question and icon */
+    }
+    
+  }

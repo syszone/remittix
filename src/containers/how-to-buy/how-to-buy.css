@@ -1,0 +1,52 @@
+.remtittix__how-to-buy {
+    
+    display: flex; /* Align children side by side */
+    flex-direction: column;
+    justify-content: center; /* Space between the content and bank details */
+    align-items:center; /* Align items to the top */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    color: #000 !important;   /* Example text color */
+    width: 100%;
+    background-color: #F2F5F6;
+     
+    
+}
+
+/* Container styles */
+.FeatureBoxContainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items from the top */
+    gap: 84px; /* Space between the columns */
+    max-width: 1200px; /* Limit max width for the container */
+    margin: 40px auto; /* Center the container */
+     
+}
+
+/* Wrapper for each FeatureBox */
+.FeatureBoxWrapper {
+    max-width: 370px; /* Set the max width for each box */
+    width: 100%;
+    position: relative; /* Required for positioning */
+}
+
+/* Middle box adjustment */
+.middle-box {
+    top: -40px;
+    position: relative;
+}
+
+/* Mobile view */
+@media screen and (max-width: 768px) {
+    .FeatureBoxContainer {
+        flex-direction: column;
+        gap: 20px; /* Space between rows */
+    }
+
+    .FeatureBoxWrapper,
+    .middle-box {
+        top: 0; /* Reset any top positioning */
+        margin-top: 20px; /* Add margin between items */
+    }
+}
+

@@ -1,0 +1,39 @@
+/* Common button styles */
+.custom-button {
+    width: 100%; /* Set button width to 100% */
+    border-radius: 7.517px;
+    border: 1.087px solid rgba(249, 255, 56, 0.32);
+    box-shadow: 0px 0.94px 0.94px 0px rgba(255, 255, 255, 0.25) inset;
+    padding: 10px 20px; /* Add padding */
+    font-size: 15px; /* Default text size */
+    font-weight: 600; /* Default font weight */
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease; /* Smooth transition */
+    height: 46px;
+    margin-top: 20px; 
+  }
+  
+  /* Simple button state */
+  .custom-button.simple {
+    background: linear-gradient(64deg, rgba(249, 255, 56, 0.06) 1.07%, rgba(6, 29, 49, 0.06) 86.86%), rgba(255, 255, 255, 0.03);
+    border: 1.087px solid rgba(249, 255, 56, 0.32);
+    color: #fff; /* Default color */
+  }
+  
+  /* Highlighted button state */
+  .custom-button.highlighted {
+    background: linear-gradient(90deg, rgba(249, 255, 56, 0.40) 0%, #061D31 107.6%);
+    border: 1.087px solid #F9FF38;
+    color: #F9DD4B; /* Highlighted text color */
+    font-size: 15px; /* Highlighted text size */
+    font-weight: 600; /* Highlighted font weight */
+  }
+  
+  /* Hover state for both buttons */
+  .custom-button:hover {
+    background-color: #F9FF38;
+    background-image: none;
+    color: #041019; /* Change text color on hover */
+     
+  }
+  

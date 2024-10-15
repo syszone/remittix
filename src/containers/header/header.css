@@ -1,0 +1,555 @@
+.remtittix__header {
+  display: flex; /* Align children side by side */
+  justify-content: space-between; /* Space between the content and bank details */
+  align-items: flex-start; /* Align items to the top */
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  
+  }
+
+  /* Main content */
+.remtittix__header-content {
+    flex-basis: 60%; /* Allow the content to take approximately 60% of the container */
+    max-width: 920px; /* Optional max width to match the Figma design */
+    margin-right: 60px; /* Space on the right as per the design */
+  }
+  
+  /* Bank details */
+  .remtittix__header-content_bankdetails {
+    flex-basis: 40%; /* Allow bank details to take approximately 40% of the container */
+    max-width: 576px; /* Optional max width to match the Figma design */
+  }
+  
+.remtittix__header-content,
+.remtittix__header-content_bankdetails {
+  flex: 1; /* Allow each section to take up equal space */
+  margin: 10px; /* Add some margin for spacing */
+}
+
+.remtittix__header-content_tokensales{
+    
+    /* width: 550px;
+    height: 217px; */
+    flex-shrink: 0;
+    margin-top: 1.5rem;
+}
+
+.remtittix__header-content_tokensales_statistic {
+    display: flex;
+    margin: 10px 0 10px 0;
+    justify-content: space-between; /* Align first child left, second child right */
+    align-items: center; /* Vertically centers the children if necessary */
+    width: 100%; /* Ensure the container takes full width */     
+    gap: 10px;
+  }
+
+  .remtittix__header-content_tokensales-statusbar
+  {
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(2, 8, 14, 0.50);
+    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.12) inset;     
+
+  }
+
+  .remtittix__header-content_tokensales_statusbar-progress
+  {
+    color: #040D16;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    display: flex;
+   
+    align-items: center;
+    position: relative;
+    padding-left: 25px;
+    width: 75%;
+    height: 36px;
+    flex-shrink: 0;
+    border-radius: 8px 0px 0px 8px;
+    background: linear-gradient(90deg, #F9FF38 0%, #061D31 107.6%);
+    box-shadow: 0px 1px 1px 0px rgba(255, 255, 255, 0.25) inset;
+  }
+
+  .remtittix__header-content_tokensales_sale
+  {
+    display: flex;
+    justify-content: space-between; /* Align first child left, second child right */
+    align-items: center; /* Vertically centers the children if necessary */
+    width: 100%; /* Ensure the container takes full width */
+     
+    gap:10px
+  }
+  
+  .remtittix__header-content_tokensales_card {
+    display: flex;
+    margin: 10px 0 10px 0;
+    justify-content: space-between; /* Align first child left, second child right */
+    align-items: center; /* Vertically centers the children if necessary */
+    width: 100%; /* Ensure the container takes full width */     
+    gap: 10px;
+  }
+
+  .remtittix__header-content_tokensales_card-box
+  {
+    display: flex;
+    justify-content: space-between; /* Align first child left, second child right */
+    align-items: center; /* Vertically centers the children if necessary */
+
+    width: 50%;
+    height: 72px;
+    
+    padding: 25px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.06);     
+  }
+
+.remtittix__header-content_tokensales_amount {
+    display: flex;
+    align-items: center; /* Vertically centers the content */
+    justify-content: center; /* Horizontally centers the content */
+
+    width: 146px;
+    height: 48px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: rgba(2, 8, 14, 0.15);
+    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.12) inset;
+}
+
+.remtittix__header-button button {
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    padding: 10px 20px;
+    box-sizing: border-box;
+    width: 250px; /* Adjust the button width as needed */
+    height: 48px;
+    position: relative;
+    background-color: transparent; /* Optional: Make sure background is set as per design */
+    border: none; /* Remove default button border */
+    cursor: pointer;
+    border-radius: 8px;
+
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.remtittix__header-button span
+{
+	display:inline-block;
+    width: 120px;
+    vertical-align:middle;
+
+}
+
+
+.remtittix__header-button .btn_content {
+    display: flex;
+    justify-content: center; /* Centers text and image container within the button */
+    align-items: center;
+    width: 100%;
+    position: relative; /* Needed to center text and position the image container */
+}
+
+.remtittix__header-button .btn_text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Centers text horizontally */
+    text-align: center;
+    z-index: 1; /* Ensures text stays above the images */
+     
+}
+
+.remtittix__header-button .button-highlight{
+    background: #F9FF38 !important;
+    color: #041019 !important;
+     
+    border: 0 !important;
+    outline: none;
+}
+
+.remtittix__header-button .btn_image_container {
+    position: absolute;
+    right: 0px; /* Keeps the image container at the right */
+    width: 30px; /* Set width according to image size */
+    height: 30px; /* Set height according to image size */
+}
+
+.remtittix__header-button .btn_Image {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers images within the container */
+}
+
+.remtittix__header-button .btn_Image.bottom {
+    z-index: 0; /* Bottom image (yellowBtnEllips) */
+}
+
+.remtittix__header-button .btn_Image.top {
+    z-index: 1; /* Top image (blackArrow) */
+}
+
+.crypto-logos-container {
+    
+    display: flex;
+    justify-content:end; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-wrap: wrap; /* Allows images to wrap to a new line if container is too small */
+    gap: 5px; /* Adds space between the images */
+    padding: 0px; /* Optional: Adds padding around the container */
+    width: 100%; /* Full width of the parent container */   
+    box-sizing: border-box; /* Ensure padding is included in the total width/height */
+}
+  
+.crypto-logo {
+    width: 29.592px;
+    height: 29.592px;
+    flex-shrink: 0;
+    object-fit: contain; /* Ensures the image fits within the container without being cropped */
+    margin: 5px; /* Optional: Extra margin if needed */
+}
+
+.remtittix__header-content_bankdetails
+{
+    border-radius: 11.275px;
+    background: rgba(2, 8, 14, 0.75);
+    box-shadow: 0px 0.94px 0px 0px rgba(255, 255, 255, 0.12) inset; 
+    padding: 20px 15px;    
+}
+
+.remtittix__header-content_bankdetails-innerbox
+{    
+    border-radius: 11.275px;
+    border: 0.94px solid #F9FF38;
+    background: linear-gradient(64deg, rgba(249, 255, 56, 0.06) 1.07%, rgba(6, 29, 49, 0.06) 86.86%), rgba(255, 255, 255, 0.03); 
+    padding: 20px;
+}
+
+.remtittix__header-content_bankdetails-logo{
+    display: flex;
+    justify-content:right; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding: 0px 13.74px 20px 0;
+}
+
+.remtittix__header-content_bankdetails-logo .poweredby
+{
+    font-size: 6.984px;     
+    font-weight: 300;     
+    text-transform: uppercase;
+}
+.remtittix__header-content_bankdetails-logo img
+{
+    margin-left: 5px;
+    width: 17.151px;
+    height: 8.86px;
+    -webkit-filter: drop-shadow(5px 5px 5px #041019);
+    filter: drop-shadow(2px 2px 5px #041019);
+}
+
+  .remtittix__header-content_bankdetails-logo span
+{ 
+    font-size: 11.56px;
+    font-weight: 700;
+}
+  
+.remtittix__header-content_bankdetails-inputbox {
+  display: flex;
+  flex-direction: column; /* Stack each span and input/select vertically */
+  /* Adds space between rows (span + input/select) */
+  margin-top: 20px;
+}
+
+.remtittix__header-content_bankdetails-inputbox span {
+   
+  font-size: 16px; /* Optional: Adjust the text size */
+  font-weight: bold; /* Optional: Makes the span text bold */
+  margin: 0 0 5px 10px;
+}
+
+.input-box, 
+.combo-box 
+{
+  width: 100%; /* Full width for the form elements */
+  padding: 10px 10px 10px 20px; /* Adds padding to input, select, and div */
+  /* border: 1px solid #ccc;  Optional: Border for the form elements */
+  border-radius: 8px; /* Optional: Rounded corners */
+  box-sizing: border-box; /* Ensures padding is included in width */
+  margin-bottom: 20px;
+}
+
+.remtittix__header-content_bankdetails-inputbox .info-box {
+    display: flex;
+    align-items: center; /* Vertically center all items */
+    justify-content: space-between; /* Space between left and right elements */
+    padding: 10px
+     
+  }
+  
+  .remtittix__header-content_bankdetails-inputbox .left-section {
+    display: flex;
+    align-items: center; /* Vertically center the symbol and amount */
+     
+  }
+  
+  .remtittix__header-content_bankdetails-inputbox .currency-symbol {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px; /* Set width and height for the circle */
+    height: 20px;
+    border-radius: 50%; /* Make it a circle */
+    background-color: #F9DD4B; /* Circle background color */
+    color: #000; /* Symbol text color (black) */
+    font-size: 15px; /* Adjust the font size */
+    font-weight: bold; /* Bold the symbol */
+    margin-right: 10px; /* Space between symbol and amount */
+     
+  }
+  
+  .remtittix__header-content_bankdetails-inputbox .currency-amount {
+    color: #F9DD4B; /* Font color for the amount */
+    font-size: 15.034px; /* Exact font size */
+    font-weight: 700; /* Set the font weight */
+  }
+  
+  .remtittix__header-content_bankdetails-inputbox .currency-label {
+    padding: 6px 10px; /* Padding inside the rectangle */
+    border-radius: 4px; /* Rounded corners for the label */
+    background: rgba(52, 252, 180, 0.19); /* Background color */
+    color: #5BA38B; /* Font color */
+    font-size: 14px; /* Adjust font size if needed */
+    font-weight: 500; /* Medium font weight */
+  }
+  
+
+  /* Ensure the new section is placed below the header and bank details */
+.remtittix__new-section {
+    display: block; /* Ensure it's a block-level element */
+    width: 100%; /* Make sure the section takes full width */
+     
+  }
+  
+  /* Divider */
+  .remtittix__section-divider {
+    width: 100%; /* Full width divider */
+    height: 2px; /* Height of the divider */
+    background: linear-gradient(90deg, rgba(249, 255, 56, 0.00) 0%, rgba(249, 255, 56, 0.24) 17.83%, rgba(249, 255, 56, 0.00) 100%);
+    margin-bottom: 50px; /* Spacing between the divider and the next section */
+  }
+  
+  /* Container for the two equally divided sections */
+  .remtittix__new-section-content {
+    display: flex; /* Flexbox to ensure row layout */
+    flex-direction: row; /* Ensure it's always a row */
+    justify-content: center; /* Space between the two sections */
+    align-items: flex-start; /* Align items to the top */
+    gap: 20px; /* Optional gap between the sections */
+    width: 100%; /* Make sure it spans full width */
+  }
+  
+  .remtittix__header_why-us{ margin-left: 150px;}
+  /* Global Reach and Why Us - each takes up 50% of the width */
+  .remtittix__header_global-reach, 
+  .remtittix__header_why-us {
+     
+    border-radius: 8px; /* Optional rounded corners */
+  }
+  .remtittix__header_why-us{ 
+    max-width: 674px;
+    flex-wrap: wrap;
+ }
+/* Wrapper to contain the images and center them */
+.remtittix__header_global-reach .image-overlap-wrapper {
+    position: relative; /* Make the container relative so child elements can be positioned absolutely */
+    width: 527px; /* Use the size of the smaller image */
+    height: 527px;  /* 527px; Use the size of the smaller image */
+    margin-left: 130px;
+    
+  }
+  
+  /* Base image (first image) */
+  .remtittix__header_global-reach .image-base {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Ensure this is underneath the overlay image */
+  }
+  
+  /* Overlay image (second image) */
+  .remtittix__header_global-reach .image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2; /* Ensure this is on top of the base image */
+  }
+  /* Media query for smaller screens (responsive behavior) */
+  @media screen and (max-width: 800px) {
+    .remtittix__new-section-content {
+      flex-direction: column; /* Stack the sections vertically on smaller screens */
+    }
+  
+    .remtittix__header_global-reach, 
+    .remtittix__header_why-us {
+      width: 100%; /* Ensure they take up full width in column layout */
+    }
+  }
+  
+
+  
+
+   
+  
+/* Media query for larger screens */
+@media screen and (max-width: 1200px) {
+    .remtittix__header-content {
+      flex-basis: 55%; /* Shrink the content slightly on smaller screens */
+      margin-right: 40px; /* Adjust the right gap */
+    }
+  
+    .remtittix__header-content_bankdetails {
+      flex-basis: 45%; /* Expand the bank details section slightly */
+    }
+
+    .remtittix__header_global-reach .image-base, .remtittix__header_global-reach .image-overlay {
+        width: 70vw; /* 40% of the viewport width */
+        height: auto; /* Auto-adjust height to maintain aspect ratio */
+      }
+
+  }
+
+@media screen and  (max-width: 1050px)
+{
+    .remtittix__header {
+        flex-direction: column;
+    }
+
+    .remtittix__header-content {
+        flex-basis: 100%; /* Full width for the main content */
+        margin-right: 0; /* Remove right margin */
+      }
+    
+      .remtittix__header-content_bankdetails {
+        flex-basis: 100%; /* Full width for bank details */
+      }
+
+    .remtittix__header-content,
+    .remtittix__header-content_bankdetails {
+        margin: 0 0 20px 0; /* Add vertical spacing between sections */
+    }
+
+}
+
+ 
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .remtittix__new-section-content {
+      flex-direction: column; /* Stack the sections vertically on smaller screens */
+    }
+  
+     
+    .remtittix__header_why-us {
+      width: 100%; /* Ensure the divs take up full width in column mode */
+    }
+    .remtittix__header_why-us{ margin-left: 10px;}
+
+    .remtittix__header_global-reach .image-overlap-wrapper {
+       
+      margin-left: 40px !important;
+      
+    }
+    
+  }
+
+@media screen and  (max-width: 650px)
+{
+
+ 
+          
+    .remtittix__header-content {
+        width: 100%; /* Make it full width */
+        margin-right: 0; /* Remove the gap */
+      }
+    
+    .remtittix__header-content_bankdetails {
+    width: 100%; /* Make it full width */
+    }
+    
+    .remtittix__header h1 {
+        font-size: 60px;
+        line-height: 55px;
+    }
+
+    .sub_heading__text {
+        font-size: 18px;
+    }
+
+    .remtittix__header-button button {
+        width: 200px;
+    }
+    .crypto-logos-container{
+        gap: 2px;
+    }
+
+    .remtittix__header_global-reach .image-overlap-wrapper {
+        
+        width: 300px; /* Use the size of the smaller image */
+        height: 300px;  /* 527px; Use the size of the smaller image */
+         
+      }
+     
+}
+
+@media screen and  (max-width: 490px)
+{
+    .remtittix__header h1 {
+        font-size: 30px;
+        line-height: 25px;
+         
+        
+    }
+
+    .heading__30, .heading__40, .heading__50{
+
+        font-size: 30px;
+        line-height: 25px;
+    }
+
+    .sub_heading__text {
+        font-size: 14px;
+    }
+    .remtittix__header-content 
+    {
+        font-size: 12px;
+    }
+
+    .remtittix__header-content_tokensales_card-box,
+    .remtittix__header-content_tokensales_sale
+    {
+        flex-direction: column;
+         
+    }
+
+    .remtittix__header-content_tokensales_card-box
+    {
+        height: 100%;
+        padding: 10px;
+         
+    }
+    
+    .remtittix__header-button button {
+        width: 200px;
+    }
+    .crypto-logos-container{
+        gap: 2px;
+    }
+     
+     
+}

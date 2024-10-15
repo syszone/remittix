@@ -1,0 +1,152 @@
+/* Encapsulated styles for Transactions */
+.transactions-container {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: rgba(2, 8, 14, 0.50);
+    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.12) inset;
+    backdrop-filter: blur(15.35px);
+    padding: 20px;
+  }
+  
+  .transactions-title {
+    color: #697783;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  /* Parent div for side-by-side layout */
+.transactions-header-row {
+    display: flex;
+    justify-content: space-between;
+  flex-wrap: wrap; /* Adjust headers to wrap on smaller screens */
+  gap: 20px;
+  margin-bottom: 20px;
+  }
+  
+  /* Header boxes (referred as referrals boxes earlier) */
+  .transactions-header-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(50% - 10px); /* Adjust header width based on available space */
+    height: 72px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.06);
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .transactions-header-icon {
+    margin-left: 10px;
+  }
+  
+  .transactions-header-icon img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .transactions-header-text {
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: left;
+    margin-left: 15px;
+    flex-grow: 1;
+  }
+  
+  .transactions-header-number-box {
+    width: 146px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: rgba(2, 8, 14, 0.15);
+    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.12) inset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .transactions-header-number-box span {
+    color: #FFF;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  
+  /* Table Header */
+  .transactions-header, .transactions-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .transactions-header {
+    color: #697783;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .transactions-header-col {
+    flex: 1;
+  text-align: left;
+  color: #697783;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 12px;
+  }
+  
+  .transactions-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  /* Styles for rows */
+  .transactions-row {
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 10px 10px;
+  border-radius: 12px;
+  width: 100%; /* Ensure row takes up full width */
+  }
+  
+  .transactions-row-col {
+    flex: 1;
+  text-align: left;
+  padding: 5px;
+  }
+  
+  /* Coin specific styles */
+.txn-coin {
+    display: flex;
+    align-items: center; /* Align logo and coin name side by side */
+  }
+  
+  .txn-coin-logo {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* Circle background */
+    background: #000;
+    margin-right: 10px; /* Space between logo and text */
+  }
+  
+  .txn-coin img {
+    width: 27px;
+    height: 14px;
+  }
+  
+  .txn-coin-name {
+    color: #fff; /* Coin text color */
+    font-size: 16px; /* Adjust the size as needed */
+    font-weight: 600;
+  }

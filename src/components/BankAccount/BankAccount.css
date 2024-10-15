@@ -1,0 +1,91 @@
+/* List of Bank Accounts */
+.bank-account-list {
+    width: 100%;
+  }
+  
+  /* Each Bank Account Item */
+  .bank-account-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px; /* Add some space between items */
+    flex-wrap: wrap; /* Allows the image and divider to move to new lines when necessary */
+  }
+  
+  /* Left Column: Bank Details (Takes up full width) */
+  .bank-account-details {
+    flex: 1;
+    text-align: left;
+    width: calc(100% - 60px); /* Leave space for the image */
+  }
+  
+  /* Bank Name */
+  .bank-name {
+    color: #000;
+    font-size: 17.912px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+  
+  /* IBAN */
+  .iban {
+    color: #000;
+    font-size: 9.553px;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+  
+  /* SWIFT/BIC */
+  .swift-bic {
+    color: #000;
+    font-size: 9.553px;
+    font-weight: 700;
+  }
+  
+  /* Right Column: Country Image */
+  .bank-country-image {
+    width: 60px; /* Adjust the image size */
+    height: 60px;
+    background-size: cover; /* Cover the entire image container */
+    background-repeat: no-repeat;
+    margin-left: 10px; /* Add space between image and details */
+  }
+  
+  /* Divider Between Items */
+  .divider {
+    width: 100%; /* Ensure the divider takes up full width */
+    height: 1.194px;
+    background-color: #c3c3c3;
+    margin: 20px 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Ellipse in Divider */
+  .divider-ellipse {
+    position: absolute;
+    top: -22px;
+    width: 63.288px;
+    height: 41.794px;
+    border-radius: 50%;
+    background: #FFF;
+    box-shadow: 0px 42.988px 11.941px rgba(0, 0, 0, 0.00),
+                0px 27.465px 10.747px rgba(0, 0, 0, 0.00),
+                0px 15.524px 9.553px rgba(0, 0, 0, 0.01),
+                0px 7.165px 7.165px rgba(0, 0, 0, 0.02),
+                0px 1.194px 3.582px rgba(0, 0, 0, 0.02);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Ellipse Image (Icon in Divider) */
+  .divider-ellipse img {
+    width: 25px;
+    height: 25px;
+  }
+  

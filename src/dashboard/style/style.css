@@ -1,0 +1,537 @@
+/* General styles for rows and columns */
+.dashboard-page {
+    
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+
+    
+    flex-direction: column;
+    gap: 10px; /* Spacing between rows */
+    max-width: 1540px;
+    margin: 0 auto; /* Center the layout */
+    padding-top: 20px; /* Adds padding at the top */
+    padding-bottom: 20px; /* Adds padding at the bottom */
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+
+  }
+.dashboard-flex{
+  display: flex;
+}
+  .page-margin{
+
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  /* General styles for rows and columns */
+.dashboard-home {
+  display: flex;
+  
+}
+  
+  .dashboard-row {
+    display: flex;
+    width: 100%;
+    /* padding: 10px; */
+    box-sizing: border-box; /* Include padding in width calculations */
+  }
+  
+  .single-column .dashboard-column {
+    width: 100%; /* Single column takes full width */
+  }
+  .dashboard-column-nonorder
+  {
+    width: 100%;
+    box-sizing: border-box;
+    flex-grow: 1; /* Ensure it grows to fill available space */
+    overflow: hidden; /* Prevent overflow */
+    
+  }
+  .single-column{flex-direction: column;
+    flex-grow: 1;}
+
+.dashboard-column {
+    padding: 40px 16px;
+    border-radius: 12px;
+    background: rgba(2, 8, 14, 0.50);
+    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.12) inset;
+    backdrop-filter: blur(15.35px);
+     
+    box-sizing: border-box;
+    flex-grow: 1; /* Ensure it grows to fill available space */
+    overflow: hidden; /* Prevent overflow */
+    
+    
+    }
+  
+    .dashboard-column-title {
+      color: #697783;
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .dashboard-column p {
+      position: absolute;
+      
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: rgba(105, 119, 131, 0.50);
+      font-size: 20px;
+      font-weight: 300;
+    }
+    
+  .three-column {
+    display: flex;
+    gap: 20px; /* Spacing between columns */
+  }
+  
+  .two-columns {
+    display: flex;
+    gap: 20px; /* 20px gap between columns */
+  }
+  
+  .two-columns .dashboard-column {
+    width: calc(50% - 10px); /* Two columns with equal width and 20px gap */
+  }
+  
+  /* .dashboard-column {
+    border-radius: 12px;
+    background: rgba(2, 8, 14, 0.50);
+    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.12) inset;
+    backdrop-filter: blur(15.35px);
+    padding: 20px;
+    box-sizing: border-box;
+  } */
+  
+  /* Welcome text */
+  .welcome-text {
+    color: #697783;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 30px; /* Space between the text and the cards */
+  }
+  
+  /* Card styles */
+  .dashboard-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 139px;
+    border-radius: 12px;
+    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.12) inset;
+    background: linear-gradient(64deg, rgba(249, 255, 56, 0.06) 1.07%, rgba(6, 29, 49, 0.06) 86.86%), rgba(255, 255, 255, 0.03);
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .card-left {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-title {
+    color: #697783;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  
+  .card-value {
+    margin-top: 30px;
+    color: #fff;
+    font-size: 32px;
+    font-weight: 600;
+  }
+  
+  .card-right {
+    border-radius: 8px;
+    background: rgba(2, 8, 14, 0.25);
+    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.12) inset;
+    backdrop-filter: blur(15.35px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 98px; /* Adjust width for the right column */
+    height: 98px; /* Adjust height for the right column */
+  }
+  
+  .card-icon {
+    width: 30.8px;
+    height: 30.8px;
+  }
+
+
+  /* Input box container */
+.custom-input-box {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 8px;
+    background: rgba(2, 8, 14, 0.50);
+    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.12) inset;
+    backdrop-filter: blur(15.35px);
+    width: 98%; /* You can adjust this width as needed */
+    box-sizing: border-box;
+    margin-top: 30px;
+  }
+  
+  /* Icon inside the input box */
+  .custom-input-box .input-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px; /* Space between icon and input */
+  }
+  
+  /* Text input field */
+  .custom-input-box .text-input {
+    flex-grow: 1;
+    padding-left: 10px; /* Space between the icon and text input */
+    background: none;
+    border: none;
+    outline: none;
+    color: #697783;
+    font-size: 16px;
+    font-weight: 500;
+
+  }
+  
+  /* ADD link with icon */
+  .custom-input-box .add-link {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #F9FF38;
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 20px;
+  }
+  
+  /* Icon for the ADD link */
+  .custom-input-box .add-icon {
+    width: 12px;
+    height: 12px;
+    margin-right: 5px; /* Space between the icon and the text */
+  }
+
+  
+
+
+
+  /* General row and column styling */
+  /* General row and column styling */
+.dashboard-row.five-column {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  gap: 20px;
+}
+
+.dashboard-column-level {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 27px;
+}
+
+.dashboard-column-level .level {
+  color: #FFF;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.dashboard-column-level .rank {
+  margin-top: 6px;
+  color: #697783;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.logo-column {
+  margin-left: 40px;
+}
+
+.logo-column img {
+  width: 75.958px;
+  height: 96.17px;
+}
+
+/* New styles for the progress column */
+.progress-column {
+  display: flex;
+  align-items: center;
+  margin-left: 26px;
+}
+
+ 
+.progress-column .box {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a2228; /* Same background as progress bar */
+  border-radius: 50%;
+   
+}
+
+.progress-column .box img {
+  width: 100%;
+  height: 100%;
+}
+
+.progress-column .box-text {
+  position: absolute;
+  color: #F9FF38;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.progress-bar-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adds space between progress bar and other boxes */
+    margin-left: 20px;
+  }
+
+.progress-bar {
+    width: 930px;
+    height: 58px;
+    border-radius: 75px;
+    background: linear-gradient(
+      90deg,
+      #1a2228 0%,
+      #10151a 46.88%,
+      #192228 77.63%,
+      #0f151a 90.43%,
+      #1a2228 100%
+    );
+    box-shadow: 0px 0.667px 0.667px rgba(255, 255, 255, 0.12) inset;
+    position: relative; /* Makes it the reference for absolutely positioned elements */
+  }
+
+  .progress-fill {
+    width: 30%; /* Adjust fill percentage */
+    height: 100%;
+    background: linear-gradient(90deg, rgba(249, 255, 56, 0.4) 0%, #f9ff38 107.6%);
+    position: relative;
+    border-top-left-radius: 75px;
+    border-bottom-left-radius: 75px;
+    /* No right border-radius to prevent rounding on the fill */
+    /* Glow effect */
+  box-shadow: 0 0 15px rgba(249, 255, 56, 0.3), 0 0 30px rgba(249, 255, 56, 0.3);
+   
+  }
+  
+  /* Box positioning inside the progress fill */
+.boxLeft,
+.boxRight {
+  position: absolute;
+  z-index: 100;
+  top: 50%; /* Vertically center */
+  transform: translateY(-50%); /* Vertically center the box */
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  width: 60px; /* Set a fixed width for the box */
+   
+  background-color: rgba(255, 255, 255, 0.05); /* Optional background for the box */
+  border-radius: 50%; /* Make the box circular */
+}
+
+/* Adjust position relative to progress fill */
+.boxLeft {
+  left: 0; /* Keep it on the left side */
+  transform: translate(-50%, -50%); /* Adjust for absolute positioning */
+}
+
+.boxRight {
+  right: 0; /* Keep it on the right side */
+  transform: translate(50%, -50%); /* Adjust for absolute positioning */
+}
+
+.box-text {
+  position: absolute;
+  color: #F9FF38; /* Text color */
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center; /* Horizontally center the text */
+  z-index: 200; /* Make sure text is above the image */
+}
+
+/* Ensure the image fills the box */
+.boxLeft img,
+.boxRight img {
+  width: 80%;
+  height: 80%;
+  object-fit: cover; /* Ensure image scales correctly */
+   
+   
+}
+
+  /* Floating stars and progress text */
+.floating-star {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%); /* Move the star to the end of the fill */
+    
+  }
+  .floating-star img {
+    margin-left: 40px;
+    
+  }
+
+  .progress-fill .progress-text {
+    position: absolute;
+    top: 50%;
+    right: 0; /* Align with the star */
+    transform: translate(100%, -50%); /* Move text slightly to the right of the star */
+    color: #697783;
+    font-size: 18px;
+    font-weight: 600;
+    right: -40px;    
+  }
+  
+  
+  /* Styling for the referrals box */
+.dashboard-referrals-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 729px;
+  height: 72px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+/* Icon inside referrals box */
+.referrals-icon {
+  margin-left: 10px;
+  
+}
+
+.referrals-icon img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Text inside referrals box */
+.referrals-text {
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: left; /* Aligns text to the left */
+  margin-left: 15px;
+  flex-grow: 1; /* Ensures it takes up available space */
+   
+}
+
+/* Number box aligned right */
+.referrals-number-box {
+  width: 146px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(2, 8, 14, 0.15);
+  box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.12) inset;
+  backdrop-filter: blur(15.35px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.referrals-number-box span {
+  color: #FFF;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* Referrals link box */
+.dashboard-referrals-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 730px;
+  height: 72px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 10px;
+  margin-top: 30px;
+
+  border-radius: 8px;
+  background: linear-gradient(90deg, rgba(249, 255, 56, 0.14) 0%, rgba(6, 29, 49, 0.35) 107.6%);
+  box-shadow: 0px 1px 1px 0px rgba(255, 255, 255, 0.25) inset;
+
+}
+
+/* Text for referrals link */
+.referrals-link-text {
+  color: rgba(249, 255, 56, 0.50);
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 15px;
+}
+
+/* Icon box in referrals link */
+.referrals-link-icon-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  padding: 10px 24px;
+  gap: 10px;
+  flex-shrink: 0;
+  cursor: pointer; /* Makes the icon box look clickable */
+  transition: background-color 0.2s ease;
+
+  border-radius: 8px;
+background: rgba(249, 255, 56, 0.12);
+}
+
+.referrals-link-icon-box:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Add hover effect */
+}
+
+
+.referrals-link-icon {
+  width: 20px;
+  height: 20px;
+}
+
+  
+  
+  /* Utility classes for padding */
+  .padding-10px {
+    padding: 10px;
+  }
+  
+  .padding-20px {
+    padding: 20px;
+  }
+  
+  .padding-30px {
+    padding: 30px;
+  }
+  
+  .padding-40px {
+    padding: 40px;
+  }
+  
+  .padding-50px {
+    padding: 50px;
+  }
+  

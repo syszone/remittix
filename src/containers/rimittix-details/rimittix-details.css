@@ -1,0 +1,26 @@
+.remtittix__details{
+    display: flex; /* Align children side by side */
+    flex-direction: column;
+    justify-content: center; /* Space between the content and bank details */
+    align-items:center; /* Align items to the top */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    color: #000 !important;   /* Example text color */
+    width: 100%;
+    background-color: #F2F5F6;
+}
+
+.remtittix__details .button-container {
+    display: flex;
+    justify-content: flex-start; /* Align items horizontally */
+    gap: 40px; /* Space between buttons */
+    margin-bottom: 40px; /* Bottom margin for spacing */
+}
+
+/* Media query for mobile view */
+@media screen and (max-width: 768px) {
+    .remtittix__details .button-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start */
+        gap: 20px; /* Adjust gap between buttons for mobile view */
+    }
+}

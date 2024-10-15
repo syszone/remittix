@@ -1,0 +1,32 @@
+.remtittix__acceptcrypto {
+    
+    display: flex; /* Align children side by side */
+    
+    align-items: flex-start; /* Align items to the top */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+     
+    color: #000;   /* Example text color */
+    
+    }
+
+    .dark_background-image 
+    {
+        background-image: url('../../assets/images/background-crypto-payment.png');
+        background-size:cover; /* Ensure the image covers the entire element */
+        justify-content: center;
+        background-repeat: no-repeat; /* Prevent the image from repeating */
+        width: 100%; /* Make sure it takes the full width of the container */
+        min-height: 50%; /* Ensure it covers the full viewport height */
+    }    
+
+
+    @media screen and (max-width: 768px) {
+       
+         
+        .remtittix__acceptcrypto{
+            
+          display: block; /* Align children side by side */
+           
+      }
+    
+      }

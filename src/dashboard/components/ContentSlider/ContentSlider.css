@@ -1,0 +1,165 @@
+/* Slider Box */
+.content-slider-box {
+    width: 1540px;
+    height: 404px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: rgba(2, 8, 14, 0.50);
+    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.12) inset;
+    backdrop-filter: blur(15.35px);
+    padding: 40px;
+    position: relative;
+    overflow: hidden; /* To hide overflowing content */
+  }
+  
+  /* Slider Header */
+  .content-slider-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .content-slider-title {
+    color: #697783;
+    font-size: 32px;
+    font-weight: 600;
+    z-index: 200;
+  }
+  
+  /* Navigation */
+  .content-slider-nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .content-slider-nav .slider-nav-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0 12px;
+    position: relative;
+    margin-bottom: 20px;
+    width:auto;
+  }
+  
+  .content-slider-nav .slider-nav-button .nav-hover {
+    display: none;
+  }
+  
+  .content-slider-nav .slider-nav-button:hover .nav-hover {
+    display: inline;
+  }
+  
+  .content-slider-nav .slider-nav-button:hover .nav-normal {
+    display: none;
+  }
+  
+  /* Slider Content */
+  .content-slider-slides {
+    display: flex;
+    align-items: center;
+    transition: transform 0.5s ease-in-out; /* Smooth transition effect */
+    gap: 20px; /* Gap between the slides */
+    position: relative;
+  }
+  
+  .content-slide {    
+     
+    padding: 6px;
+    width: 460px;
+    height: 268px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: linear-gradient(64deg, rgba(249, 255, 56, 0.06) 1.07%, rgba(6, 29, 49, 0.06) 86.86%), rgba(255, 255, 255, 0.03);
+    box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.12) inset;
+    position: relative;
+  }
+  .content-slide-inner{
+    width: 100%;
+  height: 100%;
+  border-radius: 11.374px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px; /* Adjusted padding */
+  text-align: left; /* Ensure all text is aligned left */
+  display: flex;
+  flex-direction: column; /* Ensure items stack vertically */
+  justify-content: flex-start; /* Align items to the top */
+  align-items: flex-start; /* Align content to the left */
+  }
+  /* Smooth Slide Transition */
+  .content-slide {
+    transform: translateX(-12px); /* Adjust initial position */
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  /* Add gradient effect on both ends */
+  .content-slider-box:before,
+  .content-slider-box:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    pointer-events: none; /* Allow interaction through the gradient */
+  }
+  
+  .content-slider-box:before {
+    left: 0;
+    background: linear-gradient(90deg, #040D16 31.5%, rgba(4, 13, 22, 0.00) 100%);
+    z-index: 100;
+  }
+  
+  .content-slider-box:after {
+    right: 0;
+    background: linear-gradient(270deg, #040D16 31.5%, rgba(4, 13, 22, 0.00) 100%);
+    z-index: 100;
+  }
+  
+  /* Slide Content */
+  .slide-content {
+    width: 100%; /* Ensure slide content takes full width */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  
+  .slide-logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px; /* Add spacing between logo and heading */
+  }
+
+  .slide-logo img {
+    width: 19.488px;
+    height: 10.068px;
+  }
+  
+  .slide-logo span {
+    color: #F1F7F7;     
+    font-size: 13.136px;
+    font-weight: 700;
+    margin-left: 5px;
+  }
+  
+  .slide-heading {
+    color: #FFF;
+    font-size: 27.975px;
+    font-weight: 700;
+    line-height: 100%;
+    margin-top: 24px;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+  }
+  
+  .slide-paragraph {
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 157.636%;
+    text-transform: capitalize;
+    margin-top: 10px;
+  }
+  

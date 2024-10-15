@@ -1,0 +1,115 @@
+/* General footer styling */
+.remtittix__footer {
+    padding: 20px 120px;
+    background-color: #fff; /* Example background color */
+    color: #000;   /* Example text color */
+     
+  }
+  
+  .remtittix__footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Divider between rows */
+  .remtittix__footer-divider {
+    width: 100%;
+    height: 1px;
+    background-color: #000; /* Example divider color */
+    margin: 20px 0;
+  }
+  
+  /* Left and right column layout */
+  .remtittix__footer-left {
+    flex: 1;
+  }
+  
+  .remtittix__footer-right {
+    flex: 1;
+    text-align: right;
+     
+  }
+
+  .column_2 {
+    display: flex;
+    justify-content:end;
+    align-items: flex-start;
+    width: 100%;
+  }
+  
+  /* Logo in the first row */
+  .remtittix__footer-logo {
+    max-width: 150px; /* Adjust the size of the logo */
+  }
+  
+  /* Links */
+  .remtittix__footer-link {
+     
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .remtittix__footer-link:hover {
+    text-decoration: underline; /* Add hover effect */
+  }
+  
+  /* Disclaimer text */
+  .remtittix__footer-text {
+    margin: 0;
+  }
+
+  .remtittix__footer-contact-info{
+
+    padding: 10px;
+    margin: 20px;
+  }
+  
+  /* Contact information styling */
+  .remtittix__footer-contact {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  .remtittix__footer-contact li {
+    margin-bottom: 5px;
+  }
+  
+  /* Social media icons styling */
+  .remtittix__footer-social {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 10px;
+    margin: 20px;
+    
+  }
+  
+  .remtittix__footer-social-icon {
+    text-decoration: none;
+    margin-left: 10px; 
+  }
+  
+  .remtittix__footer-social-icon:hover {
+    text-decoration: underline;
+  }
+
+  @media screen and (max-width: 768px) {
+     
+     .remtittix__footer-row{
+      flex-direction: column;
+     }
+
+     .remtittix__footer {
+      padding: 10px; 
+      }
+
+      .menu-item{
+        display: none;
+      }
+  }
+  

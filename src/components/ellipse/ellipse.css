@@ -1,0 +1,19 @@
+/* Circle container */
+.ellipse {
+    width: var(--size); /* Dynamically set width and height */
+    height: var(--size); /* Ensure it’s a perfect circle */
+    border-radius: 50%; /* Ensures the shape is always a circle */
+  
+    /* Gradient fill: Make the fill more visible with less transparency */
+    background: linear-gradient(var(--fill-angle), rgba(249, 255, 56, 1), rgba(249, 255, 56, 0.5)); /* Adjust transparency */
+  
+    /* Circular gradient border */
+    border: 10px solid transparent; /* Transparent border to allow for gradient */
+    border-radius: 50%; /* Ensure the border follows the circular shape */
+    border-image: linear-gradient(var(--border-angle), rgba(249, 255, 56, 1), rgba(249, 255, 56, 0)) 1; /* Circular gradient border */
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  

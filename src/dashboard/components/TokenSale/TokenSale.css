@@ -1,0 +1,367 @@
+.tokensale-container {
+    max-width: 760px;
+     
+    padding: 30px 16px;
+    border-radius: 12px;
+    background: rgba(2, 8, 14, 0.50);
+    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.12) inset;
+    backdrop-filter: blur(15.35px);
+  }
+  
+  .tokensale-header {
+    display: flex;
+    justify-content: space-between;
+    color: #697783;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  .tokensale-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .tokensale-header .highlight {
+    color: #FFF;
+  }
+  
+  .tokensale-gradiantbox {
+    display: flex;
+    max-width: 726px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    background: linear-gradient(90deg, rgba(249, 255, 56, 0.12) 0%, rgba(6, 29, 49, 0.12) 107.6%);
+  }
+
+  .tokensale-middle-text {
+    color: #F9FF38;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 43px;
+  }
+  
+  .tokensale-countdown {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 7px;
+  }
+  
+  .countdown-box {
+    width: 177px;
+    height: 102px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .countdown-number {
+    color: #FFF;
+    font-size: 32px;
+    font-weight: 700;
+  }
+  
+  .countdown-label {
+    color: #697783;
+    font-size: 16px;
+    margin-top: 12px;
+  }
+  
+  .tokensale-countdown .selected {
+    border: 1px solid #F9FF38;
+    background: linear-gradient(64deg, rgba(249, 255, 56, 0.06), rgba(6, 29, 49, 0.06));
+  }
+  
+  .tokensale-countdown .selected .countdown-label {
+    color: #F9FF38;
+  }
+  
+  .tokensale-progress {
+    margin-top: 32px;
+  }
+  
+  .progress-bar {
+    position: relative; /* Make sure the bar is a relative container */
+    width: 728px;
+    height: 36px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(2, 8, 14, 0.50);
+  }
+  
+  .progress-fill {
+    position: relative;
+    height: 100%;
+    border-radius: 8px 0px 0px 8px;
+    background: linear-gradient(90deg, #F9FF38 0%, #061D31 107.6%);
+  }
+  
+  .progress-text {
+    position: absolute;
+    top: 50%;
+     
+    transform: translate(-50%, -50%); /* Center the text in the middle */
+    color: #040D16;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  
+  .tokensale-raised {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .raised-box {
+    width: 358px;
+    height: 72px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.06);
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .raised-label {
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  
+  .raised-value-box {
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: rgba(2, 8, 14, 0.15);
+    border-radius: 12px;
+    padding: 14px 25px;
+  }
+  
+  .raised-value {
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  
+ .tokensale-payment-method{
+    width: 100%;
+    gap:10px;
+ }
+
+  .tokensale-payments {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 17px;
+  }
+  
+  .accepted-text {
+    color: rgba(255, 255, 255, 0.35);
+    font-size: 16px;
+    font-weight: 700;
+  }
+  
+  .tokensale-crypto-logos-container{
+    display: flex;
+    gap: 25px;
+  }
+  
+  .crypto-logo {
+    width: 24px;
+    height: auto;
+  }
+  
+  .tokensale-divider {
+    width: 728px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.12);
+    margin: 30px 0;
+  }
+  
+  /* Prefix all tokensale classes to avoid conflicts */
+
+/* General row */
+.tokensale-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 23px;
+  gap: 6px;
+}
+
+.tokensale-receive{
+  flex-direction: column;
+  
+}
+/* Payment method box */
+.tokensale-payment-method-box {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+.tokensale-payment-label {
+  color: #F9FF38;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.tokensale-payment-label-white{
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* Amount box */
+.tokensale-amount-box {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input box with the Max button */
+.tokensale-input-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-radius: 12px;
+  border: 1.5px solid rgba(255, 255, 255, 0.12);
+  background: rgba(17, 24, 30, 0.32);
+  box-shadow: 0px 0.667px 0.667px 0px rgba(255, 255, 255, 0.12) inset;
+  padding: 7px;
+}
+
+.tokensale-input-logo{
+  width: 38.714px;
+  height: 20px;
+}
+
+/* Input field */
+.tokensale-input {
+  flex-grow: 1;
+  padding: 10px 15px;
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 16px;
+  font-weight: 700;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+/* Max button */
+.tokensale-max-btn {
+  display: inline-flex;
+  height: 48px;
+  padding: 10px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+   
+  border-radius: 8px;
+  background: rgba(249, 255, 56, 0.12);
+  color: #F9FF38;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+
+
+  /* .payment-label {
+    color: #F9FF38;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  } */
+/*   
+  .input-box {
+    position: relative;
+    width: 358px;
+    height: 64px;
+    border-radius: 12px;
+    border: 1.5px solid rgba(255, 255, 255, 0.12);
+    background: rgba(17, 24, 30, 0.32);
+  }
+  
+  input {
+    border: none;
+    background: none;
+    color: rgba(255, 255, 255, 0.35);
+    font-size: 16px;
+    font-weight: 700;
+    margin: 22px 0 0 30px;
+  } */
+  
+  /* .max-btn {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    background: rgba(249, 255, 56, 0.12);
+    border-radius: 8px;
+    padding: 10px 24px;
+    color: #F9FF38;
+    font-weight: 700;
+    width: 81px;
+  } */
+  
+  .tokensale-buy{
+    margin-top: 30px;
+  }
+
+  /* Input box container */
+.tokensale-input-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-radius: 12px;
+  border: 1.5px solid rgba(255, 255, 255, 0.12);
+  background: rgba(17, 24, 30, 0.32);
+  box-shadow: 0px 0.667px 0.667px 0px rgba(255, 255, 255, 0.12) inset;
+}
+
+  .buy-now-btn {
+    width: 728px;
+    height: 64px;
+    border-radius: 8px;
+    background: linear-gradient(90deg, rgba(249, 255, 56, 0.40) 0%, #061D31 107.6%);
+    color: #F9FF38;
+    font-size: 16px;
+    font-weight: 600;
+    position: relative;
+  }
+  
+  .sparkling-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 50%;
+    width: 28px;
+    height: auto;
+  }
+  
+  .apply-btn {
+     
+
+    display: inline-flex;
+    height: 48px;
+    padding: 10px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+     
+    border-radius: 8px;
+    background: rgba(249, 255, 56, 0.12);
+    color: #F9FF38;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+  }
+  

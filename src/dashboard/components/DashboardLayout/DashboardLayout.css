@@ -1,0 +1,49 @@
+/* General layout styles for the dashboard */
+.dashboard-layout {
+    display: flex;     
+    background: linear-gradient(90deg, #061D31 0%, #02080E 100%);
+  }
+  
+  /* Navbar on the left */
+  .dashboard-content {
+    flex-grow: 1;
+    /* 40px padding on top and bottom */
+    overflow-y: auto; /* Enable scrolling inside content */
+    padding-left: 320px; /* Optional: Add left padding if needed */
+    padding-right: 40px; /* Optional: Add right padding if needed */
+     
+  }
+
+  .dashboard-admin-navbar {
+    position: fixed; /* Fix the navbar on the left side */
+    top: 0;
+    left: 0;
+    width: 300px; /* Adjust this to your navbar width */
+    height: 100vh; /* Make the navbar take up the full height of the screen */
+    z-index: 100; /* Ensure it's above other content */
+    overflow-y: auto; /* If the navbar content is long, it will be scrollable */
+    background-color: #040F1A; /* Background color */
+  }
+  .dashboard-background {
+    /* Layering the main background image and the repeating pattern image */
+    background-image: url('../../../assets/images/dashboard/background-1.png'),
+                      url('../../../assets/images/dashboard/background-pattren.png'); /* Path to your pattern image */
+                      
+    /* Main background image settings */
+    background-size: cover, auto 100%; /* Ensure the main image scales with the page width, and the pattern image repeats vertically */
+    background-repeat: no-repeat, repeat; /* Main image doesn't repeat, pattern repeats */
+    background-position: center, top; /* Center the main image and start the pattern from the top */
+   
+     
+
+    /* Blend mode for pattern overlay */
+    background-blend-mode: overlay; /* Blend the pattern with the background image */
+
+    width: 100%; /* Full width of the container */
+    height: 100vh; /* Full viewport height */
+    position: relative;
+    min-height: 500px; /* Set the minimum height as you wanted */
+}
+
+  
+  

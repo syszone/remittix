@@ -1,0 +1,66 @@
+/* Container for the tabs and content */
+.toggle-tabs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    justify-content: center;
+    width: 100%;
+    position: relative;
+  }
+  
+  /* Tabs container */
+  .toggle-tabs {
+    display: flex;
+    justify-content: flex-start; /* Align tabs to the left */
+    gap: 10px; /* Space between the tabs */
+    position: relative;
+    z-index: 2; /* Ensure tabs appear above the content box */
+    margin-bottom: -15px; /* Pull the tabs down over the content box */
+    margin-left: 20px; /* Add a left margin to ensure tabs start from 20px */
+  }
+  
+  /* Tab button styling */
+  .toggle-tab {
+    width: 109px;
+    height: 30px;
+    border-radius: 7.165px 7.165px 7.165px 7.165px; /* Rounded top corners */
+    background: #fff;
+    border: 1.194px solid #f2f2f2;
+    /* border-bottom: none;  Remove the bottom border to overlap with the content box */
+    color: #000;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  
+  .toggle-tab.active {
+    background: #000;
+    color: #fff;
+    border-bottom: none; /* Remove the bottom border to seamlessly blend with the content box */
+  }
+  
+  /* Tab content */
+  .tab-content {
+    width: 100%;
+    max-width: 500px;
+    text-align: left;
+    position: relative;
+    z-index: 1;
+    margin-top: 10px; /* Adjust to align the content correctly with the tabs */
+  }
+  
+  /* Content box styling */
+  .tab-pane {
+    padding: 45px;
+    border-radius: 8px;
+    /* background-color: #f9f9f9; */
+    /* border: 1px solid #ddd; */
+    position: relative;
+    top: -10px; /* Pull the content up to hide behind the tab buttons */
+
+    border-radius: 11.941px;
+    border: 0.716px solid rgba(220, 220, 220, 0.24);
+    background: linear-gradient(0deg, rgba(154, 154, 154, 0.06) 0%, rgba(154, 154, 154, 0.06) 100%), rgba(255, 255, 255, 0.03);
+
+  }
+  

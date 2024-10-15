@@ -1,0 +1,121 @@
+.review-slider {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 40px 0 40px 0;
+  }
+  
+  .review-slider__column {
+    
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px; /* Fixed width for arrows */
+    cursor: pointer;
+
+  }
+  
+  .review-slider__column--center {
+    flex: 1;
+    display: flex;
+    gap: 20px; /* Space between the review items */
+    justify-content: center;
+    flex-wrap: wrap; /* Allows items to wrap if needed */
+  }
+  
+  .review-slider__item {
+    max-width: 560px;
+    max-height: 392px;
+    background: #fff;
+    border-radius: 5px;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-sizing: border-box;
+  }
+  
+  .review-slider__header {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  
+  .review-slider__circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+  
+  .review-slider__circle.red {
+    background-color: red;
+  }
+  
+  .review-slider__circle.yellow {
+    background-color: #FECF3F;
+  }
+  
+  .review-slider__circle.green {
+    background-color: green;
+  }
+  
+  .review-slider__image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin: 20px 0;
+    border-radius: 5px;
+  }
+  
+  .review-slider__heading {
+    /* font-size: 18px;
+    font-weight: bold; */
+    margin-bottom: 10px;
+    
+    color: #232323;
+    font-size: 16.97px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 11.03px; /* 65% */
+    letter-spacing: -0.679px;
+
+  }
+  
+  .review-slider__description {
+    margin-bottom: 20px;
+    color: rgba(0, 0, 0, 0.46);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 14.4px */
+    letter-spacing: -0.024px;
+  }
+  
+  .review-slider__icon {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+  }
+  .review_arrowButtons{
+    width: 150%;
+  }
+  /* Responsive design */
+  @media screen and (max-width: 768px) {
+    .review-slider__column--center {
+      flex-direction: column;
+      gap: 0;
+    }
+  
+    .review-slider__item {
+      width: 100%;
+      max-width: 100%; /* Take full width on mobile */
+    }
+  }
+  
