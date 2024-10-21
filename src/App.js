@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -45,14 +46,28 @@ function AppContent() {
   const isAuthPage =
     location.pathname === "/login" || location.pathname === "/register";
 
+  const [toggleMenu, setToggleMenu] = useState(false);
+
+  const handleToggleMenu = () => setToggleMenu(!toggleMenu);
+  const handleCloseMenu = () => setToggleMenu(false);
+
   return (
-    <div className="App">
-      {!isDashboardPage && // No navbar for dashboard pages
+    <div
+      className={`App remittix_main-content ${
+        toggleMenu && !isAuthPage ? "remittix_blur-background" : ""
+      }`}
+    >
+      {!isDashboardPage &&
+        !isAuthPage && ( // No navbar for dashboard and auth pages
+          <Navbar toggleMenu={toggleMenu} onToggleMenu={handleToggleMenu} />
+        )}
+
+      {/* {!isDashboardPage && // No navbar for dashboard pages
         (isAuthPage ? (
           <DashboardNavbar /> // Auth pages (login, register)
         ) : (
-          <Navbar /> // Public pages
-        ))}
+          <Navbar toggleMenu={toggleMenu} onToggleMenu={handleToggleMenu} /> // Public pages
+        ))} */}
 
       <Routes>
         <Route

@@ -1,0 +1,56 @@
+.slideshow-container {
+    width: 576px;
+    height: 591px;
+    position: relative;
+    overflow: hidden;
+    
+  }
+  
+ 
+  
+   
+  
+  .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .slide.active {
+    opacity: 1;
+  }
+  
+  .fade {
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+  }
+  
+  .fade.active {
+    opacity: 1;
+  }
+  
+  .slide-left {
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slide-left.active {
+    transform: translateX(0);
+  }
+  
+
+  @media (max-width: 768px) {
+    .slideshow-container {
+      max-width: 100%; /* Adjust the width to 90% of the viewport */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .slideshow-container {
+      max-width: 100%; /* On very small screens, take full width */
+    }
+  }

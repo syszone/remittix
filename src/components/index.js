@@ -16,3 +16,4 @@ export { default as FAQ } from "./FAQ/FAQ";
 export { default as BlogShowcase } from "./BlogShowcase/BlogShowcase";
 export { default as DashboardNavbar } from "./DashboardNavbar/DashboardNavbar";
 export { default as UserAuthForm } from "./UserAuthForm/UserAuthForm";
+export { default as Slideshow } from "./Slideshow/Slideshow";

@@ -132,6 +132,38 @@
         align-items: center; /* Center cards horizontally */
          
       }
+.RemittixCardWrapper{
+   width: 100% !important;
+   margin-right: auto;
+    
+}
+
+/* Styling for the first and last cards */
+.RemittixCardWrapper:first-child {
+  width: 100% !important;
+  margin-right: 0px; /* Overlap the second card */
+  margin-top: 60px; /* Push the first card lower */
+  z-index: 2; /* Ensure the first card stays above the second */
+  margin-bottom: 20px;
+}
+
+.RemittixCardWrapper:nth-child(2) {
+  margin-right: 0px; /* Space between the second and third cards */
+  z-index: 1; /* Lower z-index for the second card */
+  margin-bottom: 20px;
+}
+
+.RemittixCardWrapper:nth-child(3) {
+  margin-right: 0px; /* Overlap the fourth card */
+  z-index: 1; /* Lower z-index for the third card */
+  margin-bottom: 20px;
+}
+
+.RemittixCardWrapper:last-child {
+  margin-top: 0px; /* Push the last card lower */
+  z-index: 2; /* Ensure the fourth card stays above the third */
+  margin-bottom: 20px;
+}
 
       .remtittix__roadmap{
         display: block; /* Align children side by side */

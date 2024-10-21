@@ -419,6 +419,50 @@ a {
 	animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
+/* Add blur when the menu is open */
+.blur-background {
+  filter: blur(8px);
+  transition: filter 0.3s ease;
+}
+
+/* Add this CSS */
+.remittix_blur-background {
+  filter: blur(8px); /* Adjust the blur value as needed */
+  transition: filter 0.3s ease; /* Smooth transition */
+}
+
+
+/* Slide-down animation */
+.slide-down {
+  animation: slideDown 0.4s ease-in-out forwards;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Slide-up animation */
+.slide-up {
+  animation: slideUp 0.4s ease-in-out forwards;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+
+
+
 @-webkit-keyframes scale-up-center {
   0% {
     -webkit-transform: scale(0.5);
@@ -485,8 +529,9 @@ a {
   }
 
   .heading__50{
-    font-size: 50px !important;
+    font-size: 40px !important;
     line-height: 45px !important;
+    letter-spacing: -1px;
   }
   
 
@@ -503,9 +548,7 @@ a {
   .heading__60{
     font-size: 40px;
   }
-  .sub_heading__text{
-    font-size: 12px !important;
-  }
+   
 }
 
 /* Override styles for smaller screens */
