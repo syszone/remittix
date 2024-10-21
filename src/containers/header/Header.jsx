@@ -69,9 +69,9 @@ const Header = () => {
             rightImage={rightIcon}
             showLeftImage={true} // Toggle to show the left image
             showRightImage={true} // Toggle to show the right image
-            hoverColor="#F9FF38" // Hover color
-            textColor="#FFF" // Text color
-            hoverTextColor="#000" // Text color on hover
+            hoverColor="transparent" // Hover color
+            textColor="#000" // Text color
+            hoverTextColor="#FFF" // Text color on hover
             borderColor="#697783" // Border color matching background
             onClick={() => console.log("Button clicked")}
           />
