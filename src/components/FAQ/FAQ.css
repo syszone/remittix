@@ -7,7 +7,7 @@
   .Faq__filters {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 5px;
     margin: 40px 0;
   }
   
@@ -141,7 +141,7 @@
       width: 100%;
       
     }
-
+    .Faq__icon {display: none;}
     .Faq__question p {
         font-size: 14px !important;
       }

@@ -33,6 +33,7 @@
 
 @media screen and (max-width: 768px) {
     .BlogList__container {
+        padding: 0;
         grid-template-columns: 1fr; /* Single column on mobile */
     }
 }
