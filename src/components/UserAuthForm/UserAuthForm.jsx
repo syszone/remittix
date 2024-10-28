@@ -44,9 +44,7 @@ const UserAuthForm = ({ formType }) => {
         </h1>
         <h1 className="heading__40 highlighted">
           {" "}
-          {isLogin
-            ? "Your Remittix Account"
-            : "Create Your Remittix Account"}{" "}
+          {isLogin ? "Your Remittix Account" : "Create Remittix Account"}{" "}
         </h1>
       </div>
       <div className="auth-innerbox">
@@ -116,49 +114,85 @@ const UserAuthForm = ({ formType }) => {
             </>
           ) : (
             // Render the Password and Confirm Password for register (side by side)
-            <div className="auth-password-row">
-              <div className="auth-password-field">
-                <label>Password</label>
-                <div className="password-wrapper">
-                  <input
-                    type={showPassword ? "text" : "password"}
-                    className="input-box"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                  />
-                  <button
-                    type="button"
-                    className="password-toggle"
-                    onClick={togglePasswordVisibility}
-                  >
-                    {showPassword ? <FaEyeSlash /> : <FaEye />}
-                  </button>
+            <>
+              <div className="auth-password-row">
+                <div className="auth-password-field">
+                  <label>Password</label>
+                  <div className="password-wrapper">
+                    <input
+                      type={showPassword ? "text" : "password"}
+                      className="input-box"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      required
+                    />
+                    <button
+                      type="button"
+                      className="password-toggle"
+                      onClick={togglePasswordVisibility}
+                    >
+                      {showPassword ? <FaEyeSlash /> : <FaEye />}
+                    </button>
+                  </div>
                 </div>
-              </div>
 
-              <div className="auth-password-field">
-                <label>Confirm Password</label>
-                <div className="password-wrapper">
-                  {" "}
-                  {/* Add wrapper for consistency */}
-                  <input
-                    type={showConfirmPassword ? "text" : "password"}
-                    className="input-box"
-                    value={confirmPassword}
-                    onChange={(e) => setConfirmPassword(e.target.value)}
-                    required
-                  />
-                  <button
-                    type="button"
-                    className="password-toggle"
-                    onClick={toggleConfirmPasswordVisibility}
-                  >
-                    {showConfirmPassword ? <FaEyeSlash /> : <FaEye />}
-                  </button>
+                <div className="auth-password-field">
+                  <label>Confirm Password</label>
+                  <div className="password-wrapper">
+                    {" "}
+                    {/* Add wrapper for consistency */}
+                    <input
+                      type={showConfirmPassword ? "text" : "password"}
+                      className="input-box"
+                      value={confirmPassword}
+                      onChange={(e) => setConfirmPassword(e.target.value)}
+                      required
+                    />
+                    <button
+                      type="button"
+                      className="password-toggle"
+                      onClick={toggleConfirmPasswordVisibility}
+                    >
+                      {showConfirmPassword ? <FaEyeSlash /> : <FaEye />}
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
+              <div className="auth-remember" style={{ marginTop: 10 }}>
+                <input
+                  type="checkbox"
+                  id="notificationSignup"
+                  className="checkbox"
+                />
+                <label
+                  htmlFor="notificationSignup"
+                  className="remember-text term-text "
+                >
+                  Sign me up to receive email notifications from us with deals,
+                  sales, and company updates
+                </label>
+              </div>
+              <div
+                className="auth-remember"
+                style={{ marginTop: 10, marginBottom: 10 }}
+              >
+                <input type="checkbox" id="termsAgreed" className="checkbox" />
+                <label
+                  htmlFor="termsAgreed"
+                  className="remember-text term-text "
+                >
+                  I agree to the{" "}
+                  <a href="#" style={{ color: "#F9FF38" }}>
+                    {" "}
+                    Privacy Policy
+                  </a>{" "}
+                  and{" "}
+                  <a href="#" style={{ color: "#F9FF38" }}>
+                    Terms & conditions{" "}
+                  </a>
+                </label>
+              </div>
+            </>
           )}
 
           <div className="auth-buttons">

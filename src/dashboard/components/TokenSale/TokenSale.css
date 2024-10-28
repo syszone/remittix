@@ -188,7 +188,7 @@
 /* General row */
 .tokensale-row {
   display: flex;
-  justify-content: center;
+   
   margin-bottom: 23px;
   gap: 6px;
 }
@@ -201,8 +201,12 @@
 .tokensale-payment-method-box {
   display: flex;
   flex-direction: column;
+
 }
 
+.tokensale-payment-method-box, .tokensale-amount-box{
+  width:100%
+}
 /* Labels */
 .tokensale-payment-label {
   color: #F9FF38;
@@ -365,3 +369,16 @@
     cursor: pointer;
   }
   
+  @media (max-width: 768px) {
+  .tokensale-header{
+    font-size: 16px;
+  }
+   
+  .tokensale-stage{ align-self: flex-end;}
+
+  .progress-bar {width: 100% !important;}
+
+  .tokensale-payment-method, .tokensale-raised{flex-direction: column;}
+  .tokensale-crypto-logos-container{gap: 2px;}
+  .raised-box {width: 100%;}
+}

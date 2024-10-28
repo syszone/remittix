@@ -1,5 +1,9 @@
 import React, { useState } from "react";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa"; // Icons for expand/collapse
 import logo from "../../../assets/images/logo.png";
+import totalTransactions from "../../../assets/images/icon_total_transactions.png";
+import transactionsAmount from "../../../assets/images/icon_amount_transactions.png";
+
 import "./Transactions.css"; // Encapsulated styles for Transactions component
 import transactionsData from "./transactionsData.json";
 
@@ -7,10 +11,9 @@ const Transactions = ({
   title = "Transactions",
   columnsToShow = [],
   showHeaders = true,
-  showPagination = true, // Toggle pagination
-  rowsPerPage = 5, // Number of rows per page (can be set during implementation)
+  showPagination = true,
+  rowsPerPage = 5,
 }) => {
-  // Default column data (can be customized or removed via implementation)
   const columns = [
     {
       name: "Coin",
@@ -36,32 +39,10 @@ const Transactions = ({
     { name: "TimeAgo", header: "TIME AGO", row: (data) => data.timeAgo },
   ];
 
-  // Sample data (rows)
-  //   const rowData = [
-  //     {
-  //       coin: "$RTX",
-  //       orderId: "4523725847",
-  //       buyBackValue: "443,192.01 $RTX",
-  //       amount: "650,000",
-  //       price: "$0.01",
-  //       value: "$6,500.00",
-  //       timeAgo: "2 Hours Ago",
-  //     },
-  //     {
-  //       coin: "$RTX",
-  //       orderId: "4523725890",
-  //       buyBackValue: "50,000 $RTX",
-  //       amount: "250,000",
-  //       price: "$0.02",
-  //       value: "$5,000.00",
-  //       timeAgo: "1 Hour Ago",
-  //     },
-  // Add more rows for testing
-  //];
-
   const rowData = transactionsData;
-
   const [currentPage, setCurrentPage] = useState(1);
+  const [expandedRow, setExpandedRow] = useState(null); // Track expanded row
+
   const totalPages = Math.ceil(rowData.length / rowsPerPage);
 
   const handlePageChange = (newPage) => {
@@ -70,46 +51,47 @@ const Transactions = ({
     }
   };
 
-  // Filtering columns to show
+  const toggleExpandRow = (index) => {
+    setExpandedRow(expandedRow === index ? null : index);
+  };
+
   const filteredColumns = columns.filter((col) =>
     columnsToShow.includes(col.name)
   );
 
-  // Paginate the rows based on the current page
   const indexOfLastRow = currentPage * rowsPerPage;
   const indexOfFirstRow = indexOfLastRow - rowsPerPage;
   const currentRows = rowData.slice(indexOfFirstRow, indexOfLastRow);
 
   return (
     <div className="transactions-container">
-      {/* Title */}
       <div className="transactions-title" style={{ fontSize: "24px" }}>
         {title}
       </div>
 
-      {/* Conditionally render the headers */}
       {showHeaders && (
         <div className="transactions-header-row">
-          {/* Header Box 1 */}
           <div className="transactions-header-box">
-            <div className="transactions-header-icon">
-              <img src={logo} alt="Referrals Icon" />
-            </div>
-            <div className="transactions-header-text">
-              Total Completed Transactions
+            <div className="transactions-header-content">
+              <div className="transactions-header-icon">
+                <img src={totalTransactions} alt="Total Transactions" />
+              </div>
+              <div className="transactions-header-text">
+                Total Completed Transactions
+              </div>
             </div>
             <div className="transactions-header-number-box">
               <span>0</span>
             </div>
           </div>
-
-          {/* Header Box 2 */}
           <div className="transactions-header-box">
-            <div className="transactions-header-icon">
-              <img src={logo} alt="Referrals Icon" />
-            </div>
-            <div className="transactions-header-text">
-              Total Transactions Amount
+            <div className="transactions-header-content">
+              <div className="transactions-header-icon">
+                <img src={transactionsAmount} alt="Transactions Amount" />
+              </div>
+              <div className="transactions-header-text">
+                Total Transactions Amount
+              </div>
             </div>
             <div className="transactions-header-number-box">
               <span>5</span>
@@ -118,38 +100,51 @@ const Transactions = ({
         </div>
       )}
 
-      {/* Table Header */}
-      <div
-        className="transactions-header"
-        style={showHeaders ? {} : { marginTop: 62 }}
-      >
-        {filteredColumns.map((col, index) => (
-          <div
-            key={index}
-            className={`transactions-header-col col-${col.name}`}
-          >
-            {col.header}
-          </div>
-        ))}
-      </div>
-
-      {/* Rows */}
       <div className="transactions-body">
         {currentRows.map((data, rowIndex) => (
-          <div key={rowIndex} className="transactions-row">
-            {filteredColumns.map((col, colIndex) => (
-              <div
-                key={colIndex}
-                className={`transactions-row-col col-${col.name}`}
-              >
-                {col.row(data)}
+          <>
+            <div className="transactions-row-box">
+              <div key={rowIndex} className="transactions-row">
+                {filteredColumns.map((col, colIndex) => (
+                  <div
+                    key={colIndex}
+                    className={`transactions-row-col col-${col.name}`}
+                  >
+                    {col.row(data)}
+                  </div>
+                ))}
+
+                <div
+                  className="transactions-toggle-icon"
+                  onClick={() => toggleExpandRow(rowIndex)}
+                >
+                  {expandedRow === rowIndex ? (
+                    <FaChevronUp />
+                  ) : (
+                    <FaChevronDown />
+                  )}
+                </div>
               </div>
-            ))}
-          </div>
+              {expandedRow === rowIndex && (
+                <div className="transactions-row-details">
+                  <div className="transactions-row-detail">
+                    <span className="detail-label">Order ID:</span>{" "}
+                    {data.orderId}
+                  </div>
+                  <div className="transactions-row-detail">
+                    <span className="detail-label">Value:</span> {data.value}
+                  </div>
+                  <div className="transactions-row-detail">
+                    <span className="detail-label">Time Ago:</span>{" "}
+                    {data.timeAgo}
+                  </div>
+                </div>
+              )}
+            </div>
+          </>
         ))}
       </div>
 
-      {/* Pagination */}
       {showPagination && (
         <div className="pagination">
           <button

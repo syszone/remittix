@@ -47,12 +47,19 @@ const Leaderboard = ({ rowsPerPage = 5 }) => {
               </div>
             </div>
 
-            {/* Column 4: Total Transactions */}
-            <div className="leaderboard-transactions">
+            {/* Column 4: Total Transactions - hidden on mobile */}
+            <div className="leaderboard-transactions desktop-only">
               <div className="total-tx-text">Total Transactions</div>
               <div className="total-tx-amount">{row.totalAmount}</div>
             </div>
           </div>
+
+          {/* Mobile-only row for Total Transactions */}
+          <div className="leaderboard-transactions mobile-only">
+            <div className="total-tx-text">Total Transactions</div>
+            <div className="total-tx-amount">{row.totalAmount}</div>
+          </div>
+
           {/* Divider */}
           <div className="leaderboard-divider"></div>
         </div>
@@ -113,10 +120,14 @@ const Leaderboard = ({ rowsPerPage = 5 }) => {
             </div>
           </div>
 
-          <div className="leaderboard-transactions">
+          <div className="leaderboard-transactions desktop-only">
             <div className="total-tx-text">Total Transactions</div>
             <div className="total-tx-amount">$1,234,567.89</div>
           </div>
+        </div>
+        <div className="leaderboard-transactions mobile-only">
+          <div className="total-tx-text">Total Transactions</div>
+          <div className="total-tx-amount">$1,234,567.89</div>
         </div>
       </div>
     </div>

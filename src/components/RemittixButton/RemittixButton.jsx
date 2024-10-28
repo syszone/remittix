@@ -1,29 +1,33 @@
-import React, { useState } from 'react';
-import './RemittixButton.css';
+import React, { useState } from "react";
+import "./RemittixButton.css";
 
 const RemittixButton = ({
   text,
   leftImage = null, // Image on the left
+
   rightImage = null, // Image on the right
+  leftMargine = 0,
+  rightMargine = 0,
   showLeftImage = true, // Toggle display for left image
   showRightImage = true, // Toggle display for right image
-  width = '100%', // Default width is 100%, can be set via props
-  height = '64px', // Fixed height
-  backgroundColor = '#F9FF38', // Default background color
-  hoverColor = '#D4E014', // Default hover color
-  textColor = '#000', // Default text color
-  hoverTextColor = '#000', // Text color on hover
+  width = "100%", // Default width is 100%, can be set via props
+  height = "64px", // Fixed height
+  backgroundColor = "#F9FF38", // Default background color
+  hoverColor = "#D4E014", // Default hover color
+  textColor = "#000", // Default text color
+  hoverTextColor = "#000", // Text color on hover
   gradientStartColor = null, // Start color for gradient
   gradientEndColor = null, // End color for gradient (optional)
-  borderColor = '#000', // Default border color
+  borderColor = "#000", // Default border color
   onClick,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   // Determine if gradient should be applied
-  const backgroundStyle = gradientStartColor && gradientEndColor
-    ? `linear-gradient(90deg, ${gradientStartColor} 0%, ${gradientEndColor} 95%`
-    : backgroundColor;
+  const backgroundStyle =
+    gradientStartColor && gradientEndColor
+      ? `linear-gradient(90deg, ${gradientStartColor} 0%, ${gradientEndColor} 95%`
+      : backgroundColor;
 
   return (
     <button
@@ -40,11 +44,21 @@ const RemittixButton = ({
       onMouseLeave={() => setIsHovered(false)}
     >
       {showLeftImage && leftImage && (
-        <img src={leftImage} alt="left icon" className="remittix__button-left-image" />
+        <img
+          src={leftImage}
+          alt="left icon"
+          className="remittix__button-left-image"
+          style={{ marginLeft: leftMargine }}
+        />
       )}
       <span className="remittix__button-text">{text}</span>
       {showRightImage && rightImage && (
-        <img src={rightImage} alt="right icon" className="remittix__button-right-image" />
+        <img
+          src={rightImage}
+          alt="right icon"
+          className="remittix__button-right-image"
+          style={{ marginRight: rightMargine }}
+        />
       )}
     </button>
   );

@@ -98,13 +98,10 @@ const DashboardHome = () => {
         </div>
       </div>
 
-      {/* Row 2 - Single Column */}
-      <div
-        className="dashboard-row five-column dashboard-column "
-        style={{ height: "120px" }}
-      >
+      <div className="dashboard-row full-view-row" style={{ height: "120px" }}>
+        {/* Full View Only */}
         {/* Column 1: Logo */}
-        <div className="logo-column   ">
+        <div className="logo-column">
           <img src={shieldLogoLeft} alt="Shield Logo" />
         </div>
 
@@ -116,20 +113,17 @@ const DashboardHome = () => {
 
         {/* Column 3: Progress Bar and Boxes */}
         <div className="progress-bar-wrapper">
-          {/* Left Box */}
           <div className="progress-bar">
             <div className="boxLeft">
               <div className="box-text">1</div>
               <img src={polygonIcon} alt="Polygon Icon" />
             </div>
             <div className="progress-fill">
-              {/* Floating Star and Progress Text */}
               <div className="floating-star">
                 <img src={floatingStars} alt="Floating Stars" />
               </div>
               <div className="progress-text">20%</div>
             </div>
-            {/* Right Box */}
             <div className="boxRight">
               <div className="box-text">2</div>
               <img src={polygonIcon} alt="Polygon Icon" />
@@ -140,7 +134,7 @@ const DashboardHome = () => {
         {/* Column 4: Level and Rank */}
         <div className="dashboard-column-level">
           <div className="level">Level 2</div>
-          <div className="rank">Current Rank</div>
+          <div className="rank">Next Rank</div>
         </div>
 
         {/* Column 5: Logo */}
@@ -149,14 +143,62 @@ const DashboardHome = () => {
         </div>
       </div>
 
+      {/* Mobile View Only */}
+      <div className="dashboard-row mobile-view-row">
+        {/* Row 1: Side-by-side logos and levels */}
+        <div className="mobile-top-row">
+          {/* Left Logo and Level */}
+          <div className="mobile-column">
+            <div className="logo-column">
+              <img src={shieldLogoLeft} alt="Shield Logo Left" />
+            </div>
+            <div className="dashboard-column-level">
+              <div className="level">Level 1</div>
+              <div className="rank">Current Rank</div>
+            </div>
+          </div>
+
+          {/* Right Logo and Level */}
+          <div className="mobile-column">
+            <div className="logo-column">
+              <img src={shieldLogoRight} alt="Shield Logo Right" />
+            </div>
+            <div className="dashboard-column-level">
+              <div className="level">Level 2</div>
+              <div className="rank">Next Rank</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Row 2: Progress Bar */}
+        <div className="progress-bar-wrapper">
+          <div className="progress-bar">
+            <div className="boxLeft">
+              <div className="box-text">1</div>
+              <img src={polygonIcon} alt="Polygon Icon" />
+            </div>
+            <div className="progress-fill">
+              <div className="floating-star">
+                <img src={floatingStars} alt="Floating Stars" />
+              </div>
+              <div className="progress-text">20%</div>
+            </div>
+            <div className="boxRight">
+              <div className="box-text">2</div>
+              <img src={polygonIcon} alt="Polygon Icon" />
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Row 3 - Two Columns */}
       <div className="dashboard-row two-columns">
         {/* style={{ height: "906px" }} */}
-        <div className="">
+        <div className="mobileBottomMargine">
           {/* Content for Row 3 - Column 1 */}
           <TokenSale />
         </div>
-        <div className="dashboard-column-nonorder">
+        <div className="dashboard-column-nonorder mobileBottomMargine">
           {/* Content for Row 3 - Column 2 */}
           <Leaderboard rowsPerPage={5} />
         </div>
@@ -164,12 +206,12 @@ const DashboardHome = () => {
 
       {/* Row 4 - Two Columns */}
       <div className="dashboard-row two-columns">
-        <div className="dashboard-column">
+        <div className="dashboard-column mobileBottomMargine">
           {/* Content for Row 4 - Column 1 */}
           <div className="dashboard-column-title">Your Last Transactions</div>
           <p>There are no finalized transactions yet...</p>
         </div>
-        <div className="dashboard-column">
+        <div className="dashboard-column ">
           {/* Content for Row 4 - Column 2 */}
           <div className="dashboard-column-title">Referrals</div>
 

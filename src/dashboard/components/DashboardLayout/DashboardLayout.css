@@ -45,5 +45,15 @@
     min-height: 500px; /* Set the minimum height as you wanted */
 }
 
+@media (min-width: 768px) {
+}
+
+@media (max-width: 768px) {
+  .dashboard-content{
+    padding: 10px;
+  }
+}
+
+
   
   

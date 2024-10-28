@@ -15,15 +15,28 @@
 
   }
 
-/* Inner box styling */
-.auth-innerbox {
+  .auth-innerbox {
+    position: relative;
     width: 100%;
     max-width: 676px;
-    border-radius: 11.275px;
-    background: linear-gradient(64deg, rgba(249, 255, 56, 0.06) 1.07%, rgba(6, 29, 49, 0.06) 86.86%), rgba(255, 255, 255, 0.03);
+    
     padding: 30px 20px;
-    border: 1px solid #f9ff38;
+    /* background: rgba(255, 255, 255, 0.03) padding-box, linear-gradient(90deg, darkblue,darkorchid) border-box; Inner background color */
+
+    background: 
+        linear-gradient(64deg,rgba(2, 8, 14, 0.75), rgba(6, 29, 49, 0.03) 86.86%) padding-box, 
+        linear-gradient(64deg, rgba(255, 255, 255, 0.2), rgba(17, 24, 30, 0.32)) border-box;
+  
+    border-width: 1px;
+    border-style: solid; 
+
+    border-color: transparent;
+    border-radius: 12px;
+    overflow: hidden;
+    
 }
+
+ 
 
 /* Logo container */
 .auth-logo {
@@ -60,7 +73,7 @@
 }
 
 .auth-title h1 {
-    font-size: 24px;
+    font-size: 24px ;
      
     margin-bottom: 10px; /* Adjusts the margin between the headings */
     line-height: 0.8; /* Reduces the line height to bring text closer */
@@ -248,3 +261,31 @@
 .auth-footer a:hover {
     text-decoration: underline;
 }
+
+@media (max-width: 768px) {
+    .auth-container {
+        margin: auto 10px;
+        width: auto;
+    }
+
+    .auth-innerbox{
+        padding: 15px 10px;
+    }
+
+    .auth-title h1 {
+        font-size: 24px !important;
+        line-height: 24px !important;
+            
+    }
+.forgot-password{
+    font-size: 14px;
+}
+
+.term-text {
+     
+    font-size: 12px !important;
+     
+}
+ 
+   
+  }

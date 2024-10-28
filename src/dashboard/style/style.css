@@ -37,6 +37,8 @@
     width: 100%;
     /* padding: 10px; */
     box-sizing: border-box; /* Include padding in width calculations */
+    justify-content: space-between;
+  align-items: center;
   }
   
   .single-column .dashboard-column {
@@ -82,6 +84,8 @@
       color: rgba(105, 119, 131, 0.50);
       font-size: 20px;
       font-weight: 300;
+      text-align: center;
+    max-width: 90%; /* Ensure it doesn't overflow horizontally */
     }
     
   .three-column {
@@ -229,6 +233,7 @@
   align-items: center;
   padding: 10px;
   gap: 20px;
+  flex-direction: row;
 }
 
 .dashboard-column-level {
@@ -298,6 +303,8 @@
     align-items: center;
     gap: 10px; /* Adds space between progress bar and other boxes */
     margin-left: 20px;
+    margin-top: 20px;
+     
   }
 
 .progress-bar {
@@ -533,5 +540,149 @@ background: rgba(249, 255, 56, 0.12);
   
   .padding-50px {
     padding: 50px;
+  }
+  
+  /* Desktop View */
+.full-view-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Mobile View */
+.mobile-view-row {
+  display: none;
+}
+
+  @media (min-width: 768px) {
+  }
+  
+  @media (max-width: 768px) {
+     .welcome-text {
+      font-size: 28px;
+     }
+
+     .three-column, .dashboard-row {
+      display: block;
+     
+      
+     }
+     .dashboard-flex{margin-top: 50px;}
+
+     .dashboard-card {
+      margin-bottom: 15px;
+     }
+     .card-title{
+      font-size: 18px;
+     }
+
+     .card-right{
+      width: 64px; 
+      height: 64px;
+     }
+     .custom-input-box .text-input {
+      width: 70%; 
+    }
+    .dashboard-column {
+      padding: 40px 15px 10px 15px;
+    }
+    .padding-20px {
+    padding: 0;
+    }
+
+
+      /* Hide full-view layout in mobile view */
+  .full-view-row {
+    display: none;
+  }
+
+  /* Display mobile-view layout */
+  .mobile-view-row {
+    display: block;
+  }
+
+  /* Side-by-side layout for logos and levels */
+  .mobile-top-row {
+    display: flex;
+   
+  gap: 10px; /* Adds spacing between columns */
+  }
+
+  /* Inner columns for logo and level */
+.mobile-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers elements vertically */
+  align-items: center; /* Centers elements horizontally */
+  text-align: center; /* Centers text inside elements */
+  height: 100%; /* Optional: adjust to fill available height */
+  gap: 5px; /* Adds spacing between logo and level */
+  width: 100%;
+}
+.mobileBottomMargine{ margin-bottom: 20px;}
+/* Optional adjustments for images and text */
+.mobile-column .logo-column img {
+  max-width: 100px; /* Control image size if needed */
+  margin-bottom: 10px; /* Space below the image */
+}
+
+.logo-column{
+  margin: 0;
+}
+  .mobile-top-row .logo-column,
+  .mobile-top-row .dashboard-column-level {
+    flex: 1;
+    text-align: center;
+  }
+
+  /* Progress bar at the bottom */
+  .progress-bar-wrapper {
+    padding-left: 20px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+     
+    width: 100% !important;
+     
+  }
+  .dashboard-column-level .level {
+  font-size: 20px;
+}
+.dashboard-column-level .rank {
+  font-size: 14px;
+}
+
+.logo-column img {
+  width: 43.955px;
+height: 55.652px;
+}
+
+  .mobile-view-row .progress-bar {
+  width: 100%; /* Adjust width as needed */
+  max-width: 320px; /* Limits the max width for responsive scaling */
+  display: flex;
+  align-items: center; /* Centers content vertically within progress bar */
+  justify-content: space-between; /* Spaces out items within the bar */
+}
+
+.dashboard-column-level {
+  
+  align-items: center;
+  margin-left: 0;
+}
+
+.dashboard-referrals-box,.dashboard-referrals-link, .two-columns .dashboard-column{
+  width: 100%;
+}
+
+.dashboard-column p {
+  position: static;
+  transform: none;
+  font-size: 16px;
+  margin-top: 10px; /* Add some spacing from title */
+  margin-bottom: 20px;
+}
+
+
+    
   }
   

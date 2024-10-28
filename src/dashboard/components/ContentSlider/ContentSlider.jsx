@@ -111,7 +111,7 @@ const ContentSlider = () => {
           <div className="content-slide" key={index}>
             <div
               className="content-slide-inner"
-              style={{ backgroundImage: `url(${slide.background})` }}
+              style={{ backgroundImage: "url(${slide.background})" }}
             >
               <div className="slide-content">
                 <Link to="/" className="slide-logo">

@@ -24,6 +24,8 @@
   .leaderboard-row-wrapper {
     width: 100%;
     margin-bottom: 8px; /* Adjust for spacing between rows */
+    display: flex;
+  flex-direction: column;
   }
 
 
@@ -93,8 +95,20 @@
     display: flex;
     flex-direction: column;
     text-align: right;
+    justify-content: space-between;
+    width: 100%;
   }
   
+  /* Desktop-only styling */
+.desktop-only {
+  display: block;
+}
+
+/* Mobile-only styling */
+.mobile-only {
+  display: none;
+}
+
   .total-tx-text {
     color: #697783;
     font-size: 16px;
@@ -162,3 +176,42 @@
     margin-bottom: 30px;
   }
   
+
+   
+
+@media (max-width: 768px) {
+  .leaderboard-row {
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+  }
+
+  /* Hide desktop transactions column */
+  .desktop-only {
+    display: none;
+  }
+
+  /* Show mobile transactions row and align text */
+  .mobile-only {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 10px;
+  }
+  .leaderboard-transactions {
+    flex-direction: row;
+  }
+  .total-tx-amount{margin-top: 0;}
+  .leaderboard-image img {
+    width: 58.691px;
+height: 56px;
+  }
+
+  .rank-box {
+    width: 32px;
+height: 32px;
+border-radius: 8px;
+
+  }
+  .rank-number {font-size: 12px;}
+}

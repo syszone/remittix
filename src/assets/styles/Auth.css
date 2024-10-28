@@ -72,17 +72,18 @@
   }
   
   /* Footer Links Styling */
-.auth-footer-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 64px; /* Gap between links */
-  margin-top: 20px; /* Adjust the space above the footer links */
-  color: rgba(255, 255, 255, 0.35);
-  font-size: 16px;
-  font-weight: 500;
-  margin-top: 60px;
+  .auth-footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 64px;
+    margin-top: 60px;
+    color: rgba(255, 255, 255, 0.35);
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
 }
+
 
 .footer-link {
   text-decoration: none;
@@ -101,6 +102,10 @@
 
   /* Responsive design */
   @media (max-width: 768px) {
+
+    .register-container{
+      padding-top: 30px;
+    }
     .auth-form {
       padding: 20px;
     }
@@ -117,5 +122,29 @@
       font-size: 14px;
       padding: 10px;
     }
+
+    .auth-footer-links {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+  }
+
+  .footer-link {
+      flex: 1 1 auto;
+      text-align: center;
+      min-width: 100px;
+  }
+
+  /* Ensures links are in one row and copyright in the second row */
+  .auth-footer-links a {
+      width: 45%; /* Each link takes about half the row width */
+  }
+
+  .copyright {
+      flex: 1 1 100%;
+      text-align: center;
+      margin-top: 10px;
+  }
   }
   

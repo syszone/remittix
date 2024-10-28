@@ -118,16 +118,19 @@ const TokenSale = () => {
       >
         <div
           className="tokensale-payment-method-box"
-          style={{ width: "358px" }}
+          // style={{ width: "358px" }}
         >
           <label className="tokensale-payment-label">
             Select Payment Method
           </label>
           {/* ComboBox Component */}
-          <CryptoComboBox options={cryptocurrencies} />
+          <CryptoComboBox options={cryptocurrencies} width="100%" />
         </div>
 
-        <div className="tokensale-amount-box" style={{ width: "358px" }}>
+        <div
+          className="tokensale-amount-box"
+          // style={{ width: "358px" }}
+        >
           <label className="tokensale-payment-label">
             Amount of ETH you Pay
           </label>

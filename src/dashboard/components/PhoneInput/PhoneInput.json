@@ -1,0 +1,22 @@
+[
+  {
+    "countryCode": "GB",
+    "value": "+44",
+    "label": "UK"
+  },
+  {
+    "countryCode": "US",
+    "value": "+1",
+    "label": "USA"
+  },
+  {
+    "countryCode": "CA",
+    "value": "+1",
+    "label": "Canada"
+  },
+  {
+    "countryCode": "AU",
+    "value": "+61",
+    "label": "Australia"
+  }
+]

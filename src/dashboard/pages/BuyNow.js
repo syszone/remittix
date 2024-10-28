@@ -13,7 +13,7 @@ const DashboardHome = () => {
       {/* Row 3 - Two Columns */}
       <div className="dashboard-row two-columns">
         {/* style={{ height: "906px" }} */}
-        <div className="dashboard-column-nonorder">
+        <div className="dashboard-column-nonorder mobileBottomMargine">
           {/* Content for Row 3 - Column 2 */}
           <Transactions
             title="Live Orders"
@@ -27,7 +27,7 @@ const DashboardHome = () => {
             ]}
             showHeaders={false}
             showPagination={false} // Toggle pagination
-            rowsPerPage={10} // Set number of rows per page
+            rowsPerPage={11} // Set number of rows per page
           />
         </div>
 
