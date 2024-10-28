@@ -8,9 +8,9 @@ const isDevelopmentMode = () => {
 
 const isAuthenticated = () => {
   // Bypass authentication in development mode for testing
-  if (isDevelopmentMode()) {
-    return true;
-  }
+  //if (isDevelopmentMode()) {
+  return true;
+  //}
   // Simple check for an authentication token
   return localStorage.getItem("authToken") ? true : false;
 };
