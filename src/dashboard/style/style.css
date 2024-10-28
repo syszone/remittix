@@ -12,11 +12,13 @@
     margin: 0 auto; /* Center the layout */
     padding-top: 20px; /* Adds padding at the top */
     padding-bottom: 20px; /* Adds padding at the bottom */
-    justify-content: space-between;
+     
     align-items: center;
-    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    width: 100%; /* Ensure it takes the full viewport width */
 
   }
+
 .dashboard-flex{
   display: flex;
 }
