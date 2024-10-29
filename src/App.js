@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -37,14 +37,13 @@ import DashboardAdminNavbar from "./dashboard/components/DashboardAdminNavbar/Da
 
 function AppContent() {
   const location = useLocation();
+  const tokenomicsRef = useRef(null);
+  const powerbyRef = useRef(null);
 
-  // Check if the current route is part of the dashboard
   const isDashboardPage = location.pathname.startsWith("/dashboard");
-  // Check if the current route is either login or register
   const isAuthPage =
     location.pathname === "/login" || location.pathname === "/register";
 
-  //const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 1050);
   const [toggleMenu, setToggleMenu] = useState(false);
   const isMobileView =
     typeof window !== "undefined" && window.innerWidth <= 1050;
@@ -53,22 +52,12 @@ function AppContent() {
     setToggleMenu(state);
   };
 
-  // const handleToggleMenu = () => setToggleMenu(!toggleMenu);
-  //const handleCloseMenu = () => setToggleMenu(false);
+  const scrollToSection = (ref) => {
+    if (ref && ref.current) {
+      ref.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
-  // Reset toggleMenu when route changes
-  // useEffect(() => {
-  //   setToggleMenu(false);
-  // }, [location.pathname]);
-
-  // Update isMobileView on resize
-  // useEffect(() => {
-  //   const handleResize = () => setIsMobileView(window.innerWidth <= 1050);
-  //   window.addEventListener("resize", handleResize);
-  //   return () => window.removeEventListener("resize", handleResize);
-  // }, []);
-
-  // Close menu on resize to desktop to avoid showing it in large screens
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 1050 && toggleMenu) {
@@ -85,10 +74,14 @@ function AppContent() {
         toggleMenu && isMobileView ? "remittix_blur-background" : ""
       }`}
     >
-      {!isDashboardPage &&
-        !isAuthPage && ( // No navbar for dashboard and auth pages
-          <Navbar toggleMenu={toggleMenu} onToggleMenu={handleToggleMenu} />
-        )}
+      {!isDashboardPage && !isAuthPage && (
+        <Navbar
+          toggleMenu={toggleMenu}
+          onToggleMenu={handleToggleMenu}
+          scrollToSection={scrollToSection}
+          refs={{ tokenomicsRef, powerbyRef }}
+        />
+      )}
 
       <Routes>
         <Route
@@ -99,9 +92,14 @@ function AppContent() {
               <PayRemittix />
               <AcceptCrypto />
               <Reviews />
-              <Tokenomics />
+              <div ref={tokenomicsRef}>
+                <Tokenomics />
+              </div>
               <HowToBuy />
-              <PoweredBy />
+              <div ref={powerbyRef}>
+                <PoweredBy />
+              </div>
+
               <RimittixDetails />
               <Advertisment />
               <ReadMapMini />

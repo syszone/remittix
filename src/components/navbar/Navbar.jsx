@@ -13,7 +13,7 @@ import RemittixButton from "../RemittixButton/RemittixButton";
 import "./navbar.css";
 
 // Menu Component to render links
-const Menu = ({ closeMenu }) => (
+const Menu = ({ closeMenu, scrollToSection, refs }) => (
   <>
     <p>
       <Link to="/how-it-works" onClick={closeMenu}>
@@ -21,9 +21,15 @@ const Menu = ({ closeMenu }) => (
       </Link>
     </p>
     <p>
-      <a href="#tokenomitc" onClick={closeMenu}>
+      <span
+        onClick={() => {
+          scrollToSection(refs.tokenomicsRef);
+          closeMenu();
+        }}
+        style={{ cursor: "pointer" }}
+      >
         Tokonomics
-      </a>
+      </span>
     </p>
     <p>
       <Link to="/use-case" onClick={closeMenu}>
@@ -36,14 +42,24 @@ const Menu = ({ closeMenu }) => (
       </Link>
     </p>
     <p>
-      <a href="#documents" onClick={closeMenu}>
+      <span
+        onClick={() => {
+          scrollToSection(refs.powerbyRef);
+          closeMenu();
+        }}
+        style={{ cursor: "pointer" }}
+      >
         Documents
-      </a>
+      </span>
+
+      {/* <a href="#documents" onClick={closeMenu}>
+        Documents
+      </a> */}
     </p>
   </>
 );
 
-const Navbar = ({ toggleMenu, onToggleMenu }) => {
+const Navbar = ({ toggleMenu, onToggleMenu, scrollToSection, refs }) => {
   const [animationClass, setAnimationClass] = React.useState("slide-down");
   const navigate = useNavigate(); // Hook for navigation
 
@@ -87,7 +103,11 @@ const Navbar = ({ toggleMenu, onToggleMenu }) => {
             )}
           </div>
           <div className="remtittix_navbar-links_container right-align">
-            <Menu closeMenu={closeMenuWithAnimation} />
+            <Menu
+              closeMenu={closeMenuWithAnimation}
+              scrollToSection={scrollToSection}
+              refs={refs}
+            />
           </div>
 
           <div className="remtittix_navbar-button">
@@ -160,7 +180,11 @@ const Navbar = ({ toggleMenu, onToggleMenu }) => {
 
                 {/* Menu Links */}
                 <div className="remittix_navbar-menu_items">
-                  <Menu closeMenu={closeMenuWithAnimation} />
+                  <Menu
+                    closeMenu={closeMenuWithAnimation}
+                    scrollToSection={scrollToSection}
+                    refs={refs}
+                  />
                 </div>
 
                 {/* Divider */}
