@@ -47,6 +47,14 @@ const Navbar = ({ toggleMenu, onToggleMenu }) => {
   const [animationClass, setAnimationClass] = React.useState("slide-down");
   const navigate = useNavigate(); // Hook for navigation
 
+  // Ensure menu toggle only triggers in mobile view
+  const handleMenuToggle = () => {
+    if (window.innerWidth <= 1050) {
+      setAnimationClass("slide-down");
+      onToggleMenu(true);
+    }
+  };
+
   const handleLoginClick = () => {
     navigate("/login"); // Navigates to the login page
   };

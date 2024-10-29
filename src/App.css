@@ -9,38 +9,42 @@ html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-x: hidden;
+  /* Prevent horizontal scrolling */
 }
 
-body
-{
+body {
   font-family: var(--font-family);
   background: var(--color-bg);
   color: var(--color-text);
 }
 
 a {
-  color:  unset;
+  color: unset;
   text-decoration: none;
 }
 
-.secondry-color-text{
+.secondry-color-text {
   color: var(--secondry-color-text);
 }
 
 .App {
-  background-image: url('./assets/images/header_background.png'); /* Path to the background image */  
-   
-  background-repeat: no-repeat; /* Prevent the image from repeating */
-  width: 100%; /* Make sure it takes the full width of the container */
-  /*min-height: 100vh; *//* Ensure it covers the full viewport height */
-  
+  background-image: url('./assets/images/header_background.png');
+  /* Path to the background image */
+
+  background-repeat: no-repeat;
+  /* Prevent the image from repeating */
+  width: 100%;
+  /* Make sure it takes the full width of the container */
+  /*min-height: 100vh; */
+  /* Ensure it covers the full viewport height */
+
 
 }
 
 
 .heading__text {
-  
+
   color: var(--color-text);
   display: flex;
   flex-direction: column;
@@ -48,156 +52,164 @@ a {
   flex-shrink: 0;
 
   font-size: 90px;
-   
+
   font-weight: 700;
-  line-height: 77px; /* 85.556% */
+  line-height: 77px;
+  /* 85.556% */
   letter-spacing: -2px;
 }
 
 .heading__50 {
-  
+
   color: var(--color-text);
-   
+
   flex-direction: column;
   justify-content: center;
   flex-shrink: 0;
 
   font-size: 50px;
-   
+
   font-weight: 700;
-  line-height: 46px; /* 85.556% */
+  line-height: 46px;
+  /* 85.556% */
   letter-spacing: -2px;
-   
+
 }
 
 .heading__60 {
-  
+
   color: var(--color-text);
-   
+
   flex-direction: column;
   justify-content: center;
   flex-shrink: 0;
 
   font-size: 60px;
-   
+
   font-weight: 700;
-  line-height: 46px; /* 85.556% */
+  line-height: 46px;
+  /* 85.556% */
   letter-spacing: -2px;
-   
+
 }
 
 .heading__40 {
-  
+
   color: var(--color-text);
   display: flex;
   flex-direction: column;
   justify-content: center;
   flex-shrink: 0;
-  font-size: 40px;   
-  font-weight: 700;   
-   
+  font-size: 40px;
+  font-weight: 700;
+
 }
 
 .heading__30 {
-  
+
   color: var(--color-text);
   display: flex;
   flex-direction: column;
   justify-content: center;
   flex-shrink: 0;
-  font-size: 30px;   
-  font-weight: 700;   
-   
+  font-size: 30px;
+  font-weight: 700;
+
 }
 
 .heading__35 {
-  
+
   color: var(--color-text);
-   
+
   flex-direction: column;
   justify-content: center;
   flex-shrink: 0;
 
   font-size: 35px;
   font-weight: 700;
-  line-height: 46px; /* 85.556% */
+  line-height: 46px;
+  /* 85.556% */
   letter-spacing: -2px;
-   
+
 }
 
 .heading__20 {
-  
+
   color: var(--color-text);
   display: flex;
   flex-direction: column;
   justify-content: center;
   flex-shrink: 0;
-  font-size: 20px;   
-  font-weight: 700;   
-   
+  font-size: 20px;
+  font-weight: 700;
+
 }
 
 .sub_heading__text {
-  
-  margin-top: 1.5rem; 
+
+  margin-top: 1.5rem;
   flex-direction: column;
   justify-content: center;
   flex-shrink: 0;
   font-size: 20px;
-  font-weight: 400; 
-  line-height: 20.64px; /* 103.2% */
+  font-weight: 400;
+  line-height: 20.64px;
+  /* 103.2% */
   letter-spacing: -0.256px;
 }
 
 .highlight-word {
   position: relative;
   display: inline-block;
-   
+
 }
 
 .underlined {
   position: relative;
-  z-index: 1; /* Ensure the text stays above the rectangle */
-  color: inherit; /* Inherit the color from parent */
+  z-index: 1;
+  /* Ensure the text stays above the rectangle */
+  color: inherit;
+  /* Inherit the color from parent */
 }
 
 .underlined::before {
   content: '';
   position: absolute;
-  bottom: 5px; /* Align the background with the bottom of the text */
+  bottom: 5px;
+  /* Align the background with the bottom of the text */
   left: 0;
   width: 100%;
-  height: 0.6em; /* Adjust height of the yellow background */
-  background-color: var(--color-text-highlight);  /* Yellow color */
-  z-index: -1; /* Ensure the background is behind the text */
+  height: 0.6em;
+  /* Adjust height of the yellow background */
+  background-color: var(--color-text-highlight);
+  /* Yellow color */
+  z-index: -1;
+  /* Ensure the background is behind the text */
   padding: 0;
 }
 
-.highlighted{
+.highlighted {
   color: var(--color-text-highlight);
 }
 
-.dark_text{
+.dark_text {
   color: var(--color-dark-text) !important;
 }
 
-.black_text{
+.black_text {
   color: var(--color-text-light) !important;
-  
+
 }
 
-.dark_background
-{
+.dark_background {
   background-color: var(--color-bg)
 }
 
-.light_background
-{
+.light_background {
   background-color: var(--color-text)
 }
 
-.light_alternate_background
-{
+.light_alternate_background {
   background-color: #F2F5F6
 }
 
@@ -206,30 +218,37 @@ a {
   border: 1.409px solid rgba(249, 255, 56, 0.27);
   box-shadow: 0px 0.626px 0.626px 0px rgba(255, 255, 255, 0.12) inset;
   background: rgba(17, 24, 30, 0.32);
-   
+
   height: 57.626px;
-  
+
   color: var(--secondry-color-text);
   font-weight: 500;
   font-size: 20px;
- 
+
 }
 
 .centered-container {
   display: flex;
-  flex-direction: column; /* Stack children vertically */
-  justify-content: center; /* Center children vertically */
-  align-items: center; /* Center children horizontally */
-  height: 100%; /* Ensure the container takes the full height of its parent */
-  text-align: center; /* Optional: Center align text */
-  margin-bottom: 40px ;
+  flex-direction: column;
+  /* Stack children vertically */
+  justify-content: center;
+  /* Center children vertically */
+  align-items: center;
+  /* Center children horizontally */
+  height: 100%;
+  /* Ensure the container takes the full height of its parent */
+  text-align: center;
+  /* Optional: Center align text */
+  margin-bottom: 40px;
 }
 
 /* Top streak */
 .top-streak {
   position: absolute;
-  top: 0; /* Position it at the top */
-  left: 100px; /* Set left margin to 100px */
+  top: 0;
+  /* Position it at the top */
+  left: 100px;
+  /* Set left margin to 100px */
   width: 94.367px;
   height: 1.049px;
   background: linear-gradient(90deg, rgba(249, 255, 56, 0.00) 0%, rgba(249, 255, 56, 0.68) 17.83%, rgba(249, 255, 56, 0.00) 100%);
@@ -238,8 +257,10 @@ a {
 /* Bottom streak */
 .bottom-streak {
   position: absolute;
-  bottom: 0; /* Position it at the bottom */
-  left: 155px; /* Set left margin to 155px */
+  bottom: 0;
+  /* Position it at the bottom */
+  left: 155px;
+  /* Set left margin to 155px */
   width: 94.367px;
   height: 1.049px;
   background: linear-gradient(90deg, rgba(249, 255, 56, 0.00) 0%, rgba(249, 255, 56, 0.68) 17.83%, rgba(249, 255, 56, 0.00) 100%);
@@ -252,21 +273,24 @@ a {
   align-items: center;
   justify-content: center;
   height: 53px;
-  width: 100%; /* Full width */
-  max-width: 100%; /* Prevent fixed width */
+  width: 100%;
+  /* Full width */
+  max-width: 100%;
+  /* Prevent fixed width */
   border-radius: 12.582px;
   background: rgba(2, 8, 14, 0.50);
   box-shadow: 0px 1.049px 0px 0px rgba(255, 255, 255, 0.12) inset;
-   
+
   color: #FFF;
   font-size: 20px;
   font-weight: 400;
-  line-height: 46px; /* 230% */
+  line-height: 46px;
+  /* 230% */
   letter-spacing: -0.8px;
   text-align: center;
   margin-bottom: 15px;
   position: relative;
-   
+
 }
 
 
@@ -275,19 +299,21 @@ a {
 .label-container {
   display: flex;
   align-items: center;
-  gap: 8px; /* Space between the label and the icon */
-  width: 100%; /* Full width */
+  gap: 8px;
+  /* Space between the label and the icon */
+  width: 100%;
+  /* Full width */
 }
 
-.label-xl{
+.label-xl {
   max-width: 316px;
 }
 
-.label-wide{
+.label-wide {
   max-width: 255px;
 }
 
-.label-medium{
+.label-medium {
   max-width: 282px;
 }
 
@@ -299,51 +325,57 @@ a {
 .label::before {
   content: "";
   position: absolute;
-  top: 0px;  
+  top: 0px;
   left: 20px;
   width: 50%;
-  height: 1px;  
+  height: 1px;
   background: linear-gradient(90deg, rgba(249, 255, 56, 0.00) 0%, rgba(249, 255, 56, 0.68) 17.83%, rgba(249, 255, 56, 0.00) 100%);
-  border-radius: 12.582px 12.582px 0 0;  
+  border-radius: 12.582px 12.582px 0 0;
 }
 
 .label::after {
   content: "";
   position: absolute;
-  bottom: 0px;  
+  bottom: 0px;
   left: 35%;
   width: 40%;
-  height: 1px;  
+  height: 1px;
   background: linear-gradient(270deg, rgba(249, 255, 56, 0.00) 0%, rgba(249, 255, 56, 0.68) 17.83%, rgba(249, 255, 56, 0.00) 100%);
-  border-radius: 0 0 12.582px 12.582px;  
+  border-radius: 0 0 12.582px 12.582px;
 }
 
 /* Label container for Contract Address */
 .label-container {
   display: flex;
   align-items: center;
-  gap: 8px; /* Space between the label and the icon */
-  width: 100%; /* Full width */
-   
+  gap: 8px;
+  /* Space between the label and the icon */
+  width: 100%;
+  /* Full width */
+
 }
+
 /* Value styles */
 .value {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 43px;
-  width: 100%; /* Full width */
-  max-width: 100%; /* Prevent fixed width */
+  width: 100%;
+  /* Full width */
+  max-width: 100%;
+  /* Prevent fixed width */
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.06);
   color: #F9FF38;
   font-size: 20px;
   font-weight: 400;
-  line-height: 46px; /* 230% */
+  line-height: 46px;
+  /* 230% */
   letter-spacing: -0.8px;
   text-align: center;
 }
- 
+
 /* .combo-box {
   border-radius: 7.517px;
   border: 1.409px solid rgba(249, 255, 56, 0.27);
@@ -352,7 +384,7 @@ a {
 
   height: 57.626px;
 } */
- 
+
 /* Main box container */
 .responsive-box {
   width: 100%;
@@ -362,7 +394,7 @@ a {
   border-radius: 12px;
   background: rgba(2, 8, 14, 0.20);
   box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.12) inset;
-   
+
   position: relative;
   display: flex;
   justify-content: center;
@@ -376,15 +408,16 @@ a {
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 1px; /* Adjust the width of the gradient border */
+  width: 1px;
+  /* Adjust the width of the gradient border */
   height: 60%;
-  background: linear-gradient(
-    180deg,
-    rgba(249, 255, 56, 0.00) 0%,
-    rgba(249, 255, 56, 0.68) 50%, /* Gradient reaches its peak at the middle */
-    rgba(249, 255, 56, 0.00) 100%
-  );
-  border-radius: 12px 0 0 12px; /* Rounded corners for the border */
+  background: linear-gradient(180deg,
+      rgba(249, 255, 56, 0.00) 0%,
+      rgba(249, 255, 56, 0.68) 50%,
+      /* Gradient reaches its peak at the middle */
+      rgba(249, 255, 56, 0.00) 100%);
+  border-radius: 12px 0 0 12px;
+  /* Rounded corners for the border */
 }
 
 /* Content styling */
@@ -392,8 +425,10 @@ a {
   position: relative;
   z-index: 1;
   text-align: center;
-  color: white; /* Adjust text color as needed */
-  font-size: 20px; /* Adjust font size as needed */
+  color: white;
+  /* Adjust text color as needed */
+  font-size: 20px;
+  /* Adjust font size as needed */
 }
 
 .info-box {
@@ -405,25 +440,26 @@ a {
 }
 
 .section__padding {
-  padding: 2rem 6rem 0 6rem ;
+  padding: 2rem 6rem 0 6rem;
 }
 
 .section__margin {
   margin: 4rem 6rem;
 }
 
-.dividing-stroke
-{
-  border: 1px solid var(--secondry-color-text); /* Simulates a stroke with 1px width and specific color */
-  
-  box-sizing: border-box; /* Ensures border is included in the element's size */
+.dividing-stroke {
+  border: 1px solid var(--secondry-color-text);
+  /* Simulates a stroke with 1px width and specific color */
+
+  box-sizing: border-box;
+  /* Ensures border is included in the element's size */
   margin-top: 20px;
 }
 
 
 .scale-up-center {
-	-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
 /* Add blur when the menu is open */
@@ -434,8 +470,10 @@ a {
 
 /* Add this CSS */
 .remittix_blur-background {
-  filter: blur(8px); /* Adjust the blur value as needed */
-  transition: filter 0.3s ease; /* Smooth transition */
+  filter: blur(8px);
+  /* Adjust the blur value as needed */
+  transition: filter 0.3s ease;
+  /* Smooth transition */
 }
 
 
@@ -448,6 +486,7 @@ a {
   from {
     transform: translateY(-100%);
   }
+
   to {
     transform: translateY(0);
   }
@@ -462,6 +501,7 @@ a {
   from {
     transform: translateY(0);
   }
+
   to {
     transform: translateY(-100%);
   }
@@ -473,27 +513,29 @@ a {
 @-webkit-keyframes scale-up-center {
   0% {
     -webkit-transform: scale(0.5);
-            transform: scale(0.5);
+    transform: scale(0.5);
   }
+
   100% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
 }
 
 @keyframes scale-up-center {
   0% {
     -webkit-transform: scale(0.5);
-            transform: scale(0.5);
+    transform: scale(0.5);
   }
+
   100% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
 }
 
 @media screen and (max-width: 700px) {
-   
+
 
   .section__margin {
     margin: 4rem;
@@ -502,67 +544,74 @@ a {
 
 @media screen and (max-width: 550px) {
   .section__padding {
-     padding: 2rem 1rem; 
+    padding: 2rem 1rem;
   }
 
   .section__margin {
     margin: 4rem 2rem;
-  }  
+  }
 }
 
 /* Responsive styling */
 @media screen and (max-width: 768px) {
   .responsive-box {
     width: 100%;
-    max-width: 80%; /* Adjust the box size on smaller screens */
+    max-width: 80%;
+    /* Adjust the box size on smaller screens */
     max-height: auto;
     padding: 20px;
   }
 
-  .responsive-box  .content {
-    font-size: 18px; /* Smaller font size on mobile */
+  .responsive-box .content {
+    font-size: 18px;
+    /* Smaller font size on mobile */
   }
 
-  .heading__30{
+  .heading__30 {
     font-size: 30px !important;
     line-height: 20px !important;
   }
 
-  .heading__40{
+  .heading__40 {
     font-size: 40px !important;
     line-height: 40px !important;
   }
 
-  .heading__50{
+  .heading__50 {
     font-size: 40px !important;
     line-height: 45px !important;
     letter-spacing: -1px;
   }
-  
+
 
 }
 
 
 @media screen and (max-width: 1024px) {
-   
 
-  .responsive-box  .content {
-    font-size: 18px; /* Smaller font size on mobile */
+
+  .responsive-box .content {
+    font-size: 18px;
+    /* Smaller font size on mobile */
   }
 
-  .heading__60{
+  .heading__60 {
     font-size: 40px;
   }
-   
+
 }
 
 /* Override styles for smaller screens */
 @media screen and (max-width: 768px) {
   .responsive-box {
-    width: auto; /* Reset width to auto */
-    max-width: none; /* Remove max-width constraint */
-    padding: 10px; /* Adjust padding as needed */
-    margin: 0; /* Remove margin to make it full-width */
+    width: auto;
+    /* Reset width to auto */
+    max-width: none;
+    /* Remove max-width constraint */
+    padding: 10px;
+    /* Adjust padding as needed */
+    margin: 0;
+    /* Remove margin to make it full-width */
   }
 }
 
